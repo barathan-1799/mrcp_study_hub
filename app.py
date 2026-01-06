@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_agraph import agraph, Node, Edge, Config
 
 # ----------------------------
 # Data model (expand later)
@@ -19,6 +20,34 @@ SYSTEMS = [
     {"id": "oph",    "name": "Ophthalmology",  "emoji": "👁️", "desc": "Ophthalmology"},
     {"id": "psych",  "name": "Psychology & Development", "emoji": "🧩", "desc": "Psychology & Development"},
 ]
+
+#############################
+# ADD EXTRA FUNCTIONS HERE!
+def cardio_mindmap_agraph():
+    nodes = [
+        Node(id="CV", label="Cardiovascular", size=35),
+        Node(id="A", label="A Heart", size=25),
+        Node(id="B", label="B Conduction", size=25),
+        Node(id="C", label="C Coronary", size=25),
+        Node(id="D", label="D Vessels", size=25),
+        Node(id="E", label="E Blood", size=25),
+        Node(id="F", label="F Baro/Chemo", size=25),
+        Node(id="G", label="G Autonomic", size=25),
+        Node(id="H", label="H Foetal", size=25),
+    ]
+    edges = [Edge(source="CV", target=k) for k in ["A","B","C","D","E","F","G","H"]]
+
+    config = Config(
+        width=700,
+        height=500,
+        directed=False,
+        physics=True,
+        hierarchical=False,
+    )
+
+    selected = agraph(nodes=nodes, edges=edges, config=config)
+    st.write("Selected:", selected)  # returns selected node info
+#############################
 # ----------------------------
 # Page styling
 # ----------------------------
@@ -108,6 +137,9 @@ def page_system_detail():
     #######################################
     # ADD STUFF HERE!
 
+    if system_id == "cardio":
+        cardio_mindmap_agraph()
+
     ######################################
 
     st.button("← Back to Systems", on_click=go_home)
@@ -133,6 +165,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
