@@ -75,7 +75,7 @@ def go_system(system_id: str):
 # ----------------------------
 def system_card(system):
     # The button IS the card now (no extra blank button / box)
-    label = f"{system['emoji']} {system['name']}\n{system['desc']}"
+    label = f"{system['emoji']} {system['name']}}"
     if st.button(label, key=f"btn_{system['id']}", use_container_width=True):
         go_system(system["id"])
 
@@ -146,3 +146,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
