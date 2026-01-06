@@ -137,7 +137,8 @@ def main():
     with st.sidebar:
         st.header("Navigation")
         st.button("🏠 Systems", on_click=go_home)
-        st.caption("Framework: add auth, progress tracking, Qbank, spaced repetition, etc.")
+        st.button("📈 Stats", on_click=go_home)
+        st.button("🔠 Index", on_click=go_home)
 
     if st.session_state.route == "home":
         page_home()
@@ -146,5 +147,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
