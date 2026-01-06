@@ -1,4 +1,6 @@
 import streamlit as st
+import plotly.graph_objects as go
+from streamlit_plotly_events import plotly_events
 
 # ----------------------------
 # Data model (expand later)
@@ -19,6 +21,148 @@ SYSTEMS = [
     {"id": "oph",    "name": "Ophthalmology",  "emoji": "👁️", "desc": "Ophthalmology"},
     {"id": "psych",  "name": "Psychology & Development", "emoji": "🧩", "desc": "Psychology & Development"},
 ]
+
+CARDIO_RADIAL = [
+    ("A", "Heart (chambers, valves, layers, pericardium)"),
+    ("B", "Conduction system (SA node → Purkinje fibres)"),
+    ("C", "Coronary circulation (RCA/LCA, LAD/LCx, coronary veins)"),
+    ("D", "Blood vessels (arteries, arterioles, capillaries, veins)"),
+    ("E", "Blood (RBC/WBC/platelets + plasma)"),
+    ("F", "Pressure/chemo regulation (baroreceptors, chemoreceptors)"),
+    ("G", "Autonomic control (sympathetic + vagus)"),
+    ("H", "Foetal/paeds structures (ductus arteriosus, foramen ovale, etc.)"),
+]
+
+CARDIO_DETAILS = {
+    "A": [
+        "Pericardium: fibrous, serous (parietal/visceral), pericardial cavity",
+        "Chambers: RA, LA, RV, LV",
+        "Septa: interatrial, interventricular (muscular/membranous)",
+        "Valves: tricuspid, mitral, pulmonary, aortic",
+        "Support: chordae tendineae, papillary muscles",
+        "Layers: endocardium, myocardium, epicardium",
+    ],
+    "B": [
+        "SA node", "Internodal pathways", "AV node",
+        "Bundle of His", "Right bundle branch",
+        "Left bundle branch (anterior/posterior fascicles)",
+        "Purkinje fibres",
+    ],
+    "C": [
+        "RCA → marginal branch, posterior descending (PDA)",
+        "LCA → LAD, LCx",
+        "Coronary sinus",
+        "Great, middle, small cardiac veins",
+    ],
+    "D": [
+        "Aorta (ascending, arch, descending, abdominal)",
+        "Elastic arteries; muscular arteries; arterioles",
+        "Capillaries (continuous/fenestrated/sinusoidal)",
+        "Venules; medium veins; SVC; IVC",
+        "Pulmonary trunk/arteries; pulmonary veins",
+    ],
+    "E": [
+        "Cells: RBCs; WBCs (neutrophils, lymphocytes, monocytes, eosinophils, basophils); platelets",
+        "Plasma: water, electrolytes, proteins (albumin, globulins, fibrinogen), nutrients, hormones, wastes",
+    ],
+    "F": [
+        "Baroreceptors: carotid sinus, aortic arch",
+        "Chemoreceptors: carotid bodies, aortic bodies",
+    ],
+    "G": [
+        "Sympathetic cardiac nerves (incl. cervical ganglia pathways)",
+        "Parasympathetic: vagus nerve (CN X)",
+    ],
+    "H": [
+        "Foetal shunts: foramen ovale, ductus arteriosus, ductus venosus",
+        "Umbilical circulation: umbilical vein, umbilical arteries",
+        "Postnatal remnants (e.g., ligamentum arteriosum) (overview)",
+    ],
+}
+
+def radial_plot(nodes, center_label="Cardiovascular"):
+    """
+    nodes: list of (letter, label)
+    Returns a Plotly figure arranged in a radial layout.
+    """
+    n = len(nodes)
+    R = 1.0
+
+    # Center node
+    x = [0.0]
+    y = [0.0]
+    text = [f"<b>{center_label}</b>"]
+
+    # Outer nodes on a circle
+    for i, (letter, label) in enumerate(nodes):
+        theta = 2 * math.pi * i / n
+        x.append(R * math.cos(theta))
+        y.append(R * math.sin(theta))
+        text.append(f"<b>{letter}</b><br>{label}")
+
+    # Lines from center to each outer node
+    line_x = []
+    line_y = []
+    for i in range(1, n + 1):
+        line_x += [0.0, x[i], None]
+        line_y += [0.0, y[i], None]
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Scatter(
+        x=line_x, y=line_y,
+        mode="lines",
+        hoverinfo="skip"
+    ))
+
+    fig.add_trace(go.Scatter(
+        x=x, y=y,
+        mode="markers+text",
+        text=[""] * (n + 1),
+        hovertext=text,
+        hoverinfo="text",
+        marker=dict(size=[42] + [34] * n),
+        customdata=["CENTER"] + [letter for (letter, _) in nodes],  # for click detection
+    ))
+
+    fig.update_layout(
+        showlegend=False,
+        xaxis=dict(visible=False),
+        yaxis=dict(visible=False),
+        margin=dict(l=10, r=10, t=10, b=10),
+        height=500,
+    )
+    fig.update_yaxes(scaleanchor="x", scaleratio=1)
+    return fig
+
+
+def cardio_radial_ui():
+    st.subheader("Cardiovascular Radial Map")
+
+    fig = radial_plot(CARDIO_RADIAL, center_label="Cardiovascular")
+
+    # Capture clicks from plotly
+    clicked = plotly_events(fig, click_event=True, hover_event=False, select_event=False, override_height=520)
+
+    # Store selection in session state
+    st.session_state.setdefault("cardio_selected_letter", None)
+
+    if clicked:
+        point = clicked[0]
+        # point["customdata"] corresponds to our letter (or CENTER)
+        key = point.get("customdata")
+        if key and key != "CENTER":
+            st.session_state.cardio_selected_letter = key
+
+    # Render details
+    letter = st.session_state.cardio_selected_letter
+    if letter:
+        title = next((lbl for (L, lbl) in CARDIO_RADIAL if L == letter), "")
+        st.markdown(f"### {letter} — {title}")
+        for item in CARDIO_DETAILS.get(letter, []):
+            st.write(f"- {item}")
+    else:
+        st.info("Click a lettered node (A–H) to view the parts in that category.")
 
 # ----------------------------
 # Page styling
@@ -108,6 +252,9 @@ def page_system_detail():
     st.markdown(f"<div class='app-title'>{system['emoji']} {system['name']}</div>", unsafe_allow_html=True)
     # ADD STUFF HERE!
 
+    if system_id == "cardio":
+        cardio_radial_ui()
+
     st.button("← Back to Systems", on_click=go_home)
 
 # ----------------------------
@@ -131,6 +278,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
