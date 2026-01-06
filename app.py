@@ -4,18 +4,20 @@ import streamlit as st
 # Data model (expand later)
 # ----------------------------
 SYSTEMS = [
-    {"id": "cardio", "name": "Cardiovascular", "emoji": "🫀", "desc": "Heart, vessels, circulation"},
-    {"id": "resp",   "name": "Respiratory",    "emoji": "🫁", "desc": "Airways, lungs, gas exchange"},
-    {"id": "neuro",  "name": "Neurology",      "emoji": "🧠", "desc": "CNS/PNS, development, seizures"},
-    {"id": "gi",     "name": "Gastrointestinal","emoji":"🧻", "desc": "Liver, bowel, nutrition"},
-    {"id": "renal",  "name": "Renal",          "emoji": "🫘", "desc": "Kidneys, fluids, electrolytes"},
-    {"id": "endo",   "name": "Endocrine",      "emoji": "🧪", "desc": "Growth, diabetes, hormones"},
-    {"id": "heme",   "name": "Haematology",    "emoji": "🩸", "desc": "Anaemia, bleeding, malignancy"},
-    {"id": "msk",    "name": "MSK/Rheumatology","emoji":"🦴", "desc": "Joints, bone, inflammation"},
-    {"id": "derm",   "name": "Dermatology",    "emoji": "🧴", "desc": "Rashes, eczema, infections"},
-    {"id": "ent",    "name": "ENT",            "emoji": "👂", "desc": "Hearing, tonsils, sinus, airway"},
-    {"id": "oph",    "name": "Ophthalmology",  "emoji": "👁️", "desc": "Red eye, vision, squint"},
-    {"id": "psych",  "name": "Psych/Dev",      "emoji": "🧩", "desc": "Development, behaviour, ASD/ADHD"},
+    {"id": "cardio", "name": "Cardiovascular", "emoji": "🫀", "desc": "Cardiovascular"},
+    {"id": "resp",   "name": "Respiratory",    "emoji": "🫁", "desc": "Respiratory"},
+    {"id": "neuro",  "name": "Neurology",      "emoji": "🧠", "desc": "Neurology"},
+    {"id": "gi",     "name": "Gastrointestinal","emoji":"🧻", "desc": "Gastrointestinal"},
+    {"id": "renal",  "name": "Renal",          "emoji": "🫘", "desc": "Renal"},
+    {"id": "endo",   "name": "Endocrine",      "emoji": "🧪", "desc": "Endocrine"},
+    {"id": "heme",   "name": "Haematology",    "emoji": "🩸", "desc": "Haematology"},
+    {"id": "imm",    "name": "Immunology","emoji":"🦠", "desc": "Immunology"},
+    {"id": "onc",    "name": "Oncology","emoji":"🩸", "desc": "Oncology"}
+    {"id": "msk",    "name": "Rheumatology","emoji":"🦴", "desc": "Rheumatology"},
+    {"id": "derm",   "name": "Dermatology",    "emoji": "🧴", "desc": "Dermatology"},
+    {"id": "ent",    "name": "ENT",            "emoji": "👂", "desc": "ENT"},
+    {"id": "oph",    "name": "Ophthalmology",  "emoji": "👁️", "desc": "Ophthalmology"},
+    {"id": "psych",  "name": "Psychology & Development",      "emoji": "🧩", "desc": "Psychology & Development"},
 ]
 
 # ----------------------------
@@ -156,4 +158,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
