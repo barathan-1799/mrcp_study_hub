@@ -8,11 +8,11 @@ SYSTEMS = [
     {"id": "resp",   "name": "Respiratory",    "emoji": "🫁", "desc": "Respiratory"},
     {"id": "neuro",  "name": "Neurology",      "emoji": "🧠", "desc": "Neurology"},
     {"id": "gi",     "name": "Gastrointestinal","emoji":"🧻", "desc": "Gastrointestinal"},
-    {"id": "renal",  "name": "Renal",          "emoji": "🫘", "desc": "Renal"},
+    {"id": "renal",  "name": "Nephro-urology",          "emoji": "🫘", "desc": "Nephro-urology"},
     {"id": "endo",   "name": "Endocrine",      "emoji": "🧪", "desc": "Endocrine"},
     {"id": "heme",   "name": "Haematology",    "emoji": "🩸", "desc": "Haematology"},
     {"id": "imm",    "name": "Immunology","emoji":"🦠", "desc": "Immunology"},
-    {"id": "onc",    "name": "Oncology","emoji":"🩸", "desc": "Oncology"},
+    {"id": "onc",    "name": "Oncology","emoji":"♋", "desc": "Oncology"},
     {"id": "msk",    "name": "Rheumatology","emoji":"🦴", "desc": "Rheumatology"},
     {"id": "derm",   "name": "Dermatology",    "emoji": "🧴", "desc": "Dermatology"},
     {"id": "ent",    "name": "ENT",            "emoji": "👂", "desc": "ENT"},
@@ -158,6 +158,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
