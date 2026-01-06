@@ -106,23 +106,7 @@ def page_system_detail():
         return
 
     st.markdown(f"<div class='app-title'>{system['emoji']} {system['name']}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='app-sub'>{system['desc']}</div>", unsafe_allow_html=True)
-
-    st.subheader("Quick Actions")
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        st.button("📚 Notes (coming soon)")
-    with c2:
-        st.button("📝 Question Bank (coming soon)")
-    with c3:
-        st.button("🧠 Flashcards (coming soon)")
-
-    st.divider()
-    st.subheader("Content Placeholder")
-    st.info(
-        "Add your MRCPCH content here: guidelines summaries, red flags, management algorithms, "
-        "and system-based question sets."
-    )
+    # ADD STUFF HERE!
 
     st.button("← Back to Systems", on_click=go_home)
 
@@ -147,6 +131,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
