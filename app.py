@@ -8,16 +8,16 @@ SYSTEMS = [
     {"id": "resp",   "name": "Respiratory",    "emoji": "🫁", "desc": "Respiratory"},
     {"id": "neuro",  "name": "Neurology",      "emoji": "🧠", "desc": "Neurology"},
     {"id": "gi",     "name": "Gastrointestinal","emoji":"🧻", "desc": "Gastrointestinal"},
-    {"id": "renal",  "name": "Nephro-urology",          "emoji": "🫘", "desc": "Nephro-urology"},
+    {"id": "renal",  "name": "Nephro-urology", "emoji": "🫘", "desc": "Nephro-urology"},
     {"id": "endo",   "name": "Endocrine",      "emoji": "🧪", "desc": "Endocrine"},
     {"id": "heme",   "name": "Haematology",    "emoji": "🩸", "desc": "Haematology"},
-    {"id": "imm",    "name": "Immunology","emoji":"🦠", "desc": "Immunology"},
-    {"id": "onc",    "name": "Oncology","emoji":"♋", "desc": "Oncology"},
-    {"id": "msk",    "name": "Rheumatology","emoji":"🦴", "desc": "Rheumatology"},
+    {"id": "imm",    "name": "Immunology",     "emoji": "🦠", "desc": "Immunology"},
+    {"id": "onc",    "name": "Oncology",       "emoji": "♋", "desc": "Oncology"},
+    {"id": "msk",    "name": "Rheumatology",   "emoji": "🦴", "desc": "Rheumatology"},
     {"id": "derm",   "name": "Dermatology",    "emoji": "🧴", "desc": "Dermatology"},
     {"id": "ent",    "name": "ENT",            "emoji": "👂", "desc": "ENT"},
     {"id": "oph",    "name": "Ophthalmology",  "emoji": "👁️", "desc": "Ophthalmology"},
-    {"id": "psych",  "name": "Psychology & Development",      "emoji": "🧩", "desc": "Psychology & Development"},
+    {"id": "psych",  "name": "Psychology & Development", "emoji": "🧩", "desc": "Psychology & Development"},
 ]
 
 # ----------------------------
@@ -29,30 +29,27 @@ def inject_css():
         <style>
         .app-title { font-size: 2.0rem; font-weight: 800; margin-bottom: 0.2rem; }
         .app-sub   { color: #6b7280; margin-top: 0; margin-bottom: 1.2rem; }
-        div[data-testid="stVerticalBlock"] { gap: 0.7rem; }
-        .card {
+
+        /* Scope styling ONLY to the card grid wrapper */
+        .card-grid .stButton>button {
+            width: 100%;
+            text-align: left;
             border: 1px solid rgba(0,0,0,0.08);
             border-radius: 16px;
             padding: 14px 16px;
             background: white;
             box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+            white-space: pre-line;       /* allow \n to render as a new line */
+            line-height: 1.25rem;
         }
-        .card:hover {
+        .card-grid .stButton>button:hover {
             border-color: rgba(0,0,0,0.16);
             box-shadow: 0 10px 24px rgba(0,0,0,0.07);
         }
-        .card-title { font-size: 1.05rem; font-weight: 750; }
-        .card-desc  { color: #6b7280; font-size: 0.92rem; margin-top: 4px; }
-        /* Make buttons look like invisible overlays */
-        .stButton>button {
-            width: 100%;
-            border-radius: 14px;
-            padding: 0;
-            border: none;
-            background: transparent;
+        .card-grid .stButton>button:focus {
+            outline: none;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.10);
         }
-        .stButton>button:hover { background: transparent; }
-        .stButton>button:focus { box-shadow: none; outline: none; }
         </style>
         """,
         unsafe_allow_html=True
@@ -77,20 +74,9 @@ def go_system(system_id: str):
 # UI components
 # ----------------------------
 def system_card(system):
-    # We use a button to capture click, but we render the card ourselves
-    clicked = st.button("",
-                        key=f"btn_{system['id']}",
-                        help=f"Open {system['name']}")
-    st.markdown(
-        f"""
-        <div class="card">
-          <div class="card-title">{system['emoji']} {system['name']}</div>
-          <div class="card-desc">{system['desc']}</div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    if clicked:
+    # The button IS the card now (no extra blank button / box)
+    label = f"{system['emoji']} {system['name']}\n{system['desc']}"
+    if st.button(label, key=f"btn_{system['id']}", use_container_width=True):
         go_system(system["id"])
 
 # ----------------------------
@@ -100,11 +86,15 @@ def page_home():
     st.markdown('<div class="app-title">MRCPCH Study Hub</div>', unsafe_allow_html=True)
     st.markdown('<div class="app-sub">Select a body system to start revising.</div>', unsafe_allow_html=True)
 
-    # Grid layout
+    # Wrap the grid in a class so CSS only affects these buttons
+    st.markdown('<div class="card-grid">', unsafe_allow_html=True)
+
     cols = st.columns(3)
     for i, system in enumerate(SYSTEMS):
         with cols[i % 3]:
             system_card(system)
+
+    st.markdown('</div>', unsafe_allow_html=True)
 
 def page_system_detail():
     system_id = st.session_state.selected_system_id
@@ -118,7 +108,6 @@ def page_system_detail():
     st.markdown(f"<div class='app-title'>{system['emoji']} {system['name']}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='app-sub'>{system['desc']}</div>", unsafe_allow_html=True)
 
-    # Placeholder sections you can expand into real MRCPCH features
     st.subheader("Quick Actions")
     c1, c2, c3 = st.columns(3)
     with c1:
@@ -145,7 +134,6 @@ def main():
     inject_css()
     init_state()
 
-    # Sidebar nav (optional)
     with st.sidebar:
         st.header("Navigation")
         st.button("🏠 Systems", on_click=go_home)
@@ -158,7 +146,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
