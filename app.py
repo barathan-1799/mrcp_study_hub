@@ -21,16 +21,454 @@ SYSTEMS = [
 ]
 
 # ============================================================
-# EXISTING TREES (CARDIO/RESP/NEURO/GI) FROM YOUR PREVIOUS FILE
+# CARDIO / RESP / NEURO TREES (from previous code)
 # ============================================================
-# Keep your previously defined CARDIO_TREE, RESP_TREE, NEURO_TREE, GI_TREE exactly as-is above.
-# For brevity, they're not repeated here.
+CARDIO_TREE = {
+    "Heart": {
+        "External Anatomy": [
+            "Apex", "Base", "Pericardium (fibrous)",
+            "Pericardium (serous - parietal layer)",
+            "Pericardium (serous - visceral layer / epicardium)",
+            "Pericardial cavity (pericardial fluid)",
+        ],
+        "Heart Chambers": ["Right atrium", "Left atrium", "Right ventricle", "Left ventricle"],
+        "Septa": [
+            "Interatrial septum",
+            "Interventricular septum (muscular part)",
+            "Interventricular septum (membranous part)",
+        ],
+        "Heart Valves": {
+            "Atrioventricular valves": ["Tricuspid valve", "Mitral (bicuspid) valve"],
+            "Semilunar valves": ["Pulmonary valve", "Aortic valve"],
+        },
+        "Valve Support Structures": [
+            "Chordae tendineae",
+            "Papillary muscles (anterior)",
+            "Papillary muscles (posterior)",
+            "Papillary muscles (septal - right ventricle)",
+        ],
+        "Myocardial Layers": ["Endocardium", "Myocardium", "Epicardium"],
+    },
+    "Cardiac Conduction System": [
+        "Sinoatrial (SA) node",
+        "Internodal pathways",
+        "Atrioventricular (AV) node",
+        "Bundle of His",
+        "Right bundle branch",
+        "Left bundle branch",
+        "Left anterior fascicle",
+        "Left posterior fascicle",
+        "Purkinje fibres",
+    ],
+    "Coronary Circulation": {
+        "Coronary Arteries": {
+            "Right coronary artery (RCA)": ["Marginal branch", "Posterior descending artery (PDA)"],
+            "Left coronary artery (LCA)": ["Left anterior descending (LAD)", "Left circumflex (LCx)"],
+        },
+        "Coronary Veins": ["Great cardiac vein", "Middle cardiac vein", "Small cardiac vein", "Coronary sinus"],
+    },
+    "Blood Vessels": {
+        "Arteries": {
+            "Elastic arteries": ["Aorta (ascending)", "Aorta (arch)", "Aorta (descending thoracic)", "Aorta (abdominal)"],
+            "Muscular arteries": ["Carotid arteries", "Subclavian arteries", "Femoral arteries", "Radial arteries"],
+            "Arterioles": [],
+        },
+        "Capillaries": ["Continuous capillaries", "Fenestrated capillaries", "Sinusoidal capillaries"],
+        "Veins": {
+            "Venules": [],
+            "Medium veins": [],
+            "Large veins": ["Superior vena cava", "Inferior vena cava"],
+        },
+    },
+    "Major Named Vessels": {
+        "Pulmonary Circulation": [
+            "Pulmonary trunk",
+            "Right pulmonary artery",
+            "Left pulmonary artery",
+            "Pulmonary capillaries",
+            "Pulmonary veins (4)",
+        ],
+        "Systemic Circulation": {
+            "Ascending aorta": [],
+            "Aortic arch branches": ["Brachiocephalic trunk", "Left common carotid artery", "Left subclavian artery"],
+        },
+    },
+    "Blood": {
+        "Cellular Components": {
+            "Red blood cells (erythrocytes)": [],
+            "White blood cells (leukocytes)": ["Neutrophils", "Lymphocytes", "Monocytes", "Eosinophils", "Basophils"],
+            "Platelets (thrombocytes)": [],
+        },
+        "Plasma Components": [
+            "Water", "Electrolytes", "Proteins: albumin", "Proteins: globulins", "Proteins: fibrinogen",
+            "Hormones", "Nutrients", "Waste products",
+        ],
+    },
+    "Blood Pressure Regulation Structures": {
+        "Baroreceptors": ["Carotid sinus", "Aortic arch"],
+        "Chemoreceptors": ["Carotid bodies", "Aortic bodies"],
+    },
+    "Autonomic Innervation": {
+        "Sympathetic": ["Cardiac nerves", "Cervical sympathetic ganglia"],
+        "Parasympathetic": ["Vagus nerve (CN X)"],
+    },
+    "Foetal/Paediatric-Specific Structures": [
+        "Foramen ovale", "Ductus arteriosus", "Ductus venosus", "Umbilical vein", "Umbilical arteries",
+    ],
+}
 
-# (If you paste this into one file, make sure those trees remain defined before this renal tree.)
-CARDIO_TREE = CARDIO_TREE
-RESP_TREE = RESP_TREE
-NEURO_TREE = NEURO_TREE
-GI_TREE = GI_TREE
+# ---- RESP_TREE (unchanged from your previous code) ----
+RESP_TREE = {
+    "Upper Respiratory Tract": {
+        "Nose & Nasal Cavity": [
+            "External nose", "Nasal vestibule", "Nasal septum",
+            "Nasal conchae (turbinates): superior, middle, inferior",
+            "Meatuses: superior, middle, inferior",
+            "Olfactory region", "Respiratory mucosa",
+        ],
+        "Paranasal Sinuses": ["Frontal sinus", "Maxillary sinus", "Ethmoid air cells", "Sphenoid sinus"],
+        "Pharynx": ["Nasopharynx", "Oropharynx", "Laryngopharynx (hypopharynx)"],
+        "Larynx": {
+            "Cartilages": [
+                "Thyroid cartilage", "Cricoid cartilage", "Epiglottis",
+                "Arytenoid cartilages", "Corniculate cartilages", "Cuneiform cartilages",
+            ],
+            "Glottic structures": ["Vocal folds (true vocal cords)", "Vestibular folds (false vocal cords)", "Glottis"],
+            "Regions": ["Supraglottis", "Glottis", "Subglottis"],
+        },
+    },
+    "Lower Respiratory Tract": {
+        "Trachea": ["Tracheal rings (C-shaped cartilage)", "Trachealis muscle", "Carina"],
+        "Bronchi": {
+            "Main (primary) bronchi": ["Right main bronchus", "Left main bronchus"],
+            "Lobar (secondary) bronchi": [
+                "Right: superior, middle, inferior lobar bronchi",
+                "Left: superior, inferior lobar bronchi",
+            ],
+            "Segmental (tertiary) bronchi": ["Bronchopulmonary segment bronchi"],
+        },
+        "Bronchioles": ["Bronchioles (conducting)", "Terminal bronchioles", "Respiratory bronchioles"],
+        "Alveolar Region": [
+            "Alveolar ducts", "Alveolar sacs", "Alveoli", "Alveolar-capillary (respiratory) membrane",
+            "Type I pneumocytes", "Type II pneumocytes (surfactant-producing)", "Alveolar macrophages",
+        ],
+    },
+    "Lungs": {
+        "Lobes": {
+            "Right lung": ["Superior lobe", "Middle lobe", "Inferior lobe"],
+            "Left lung": ["Superior lobe", "Inferior lobe", "Lingula (part of superior lobe)"],
+        },
+        "Surfaces & Landmarks": ["Apex", "Base (diaphragmatic surface)", "Costal surface", "Mediastinal surface", "Hilum", "Root of lung"],
+        "Bronchopulmonary Segments": ["Segmental anatomy (bronchopulmonary segments)"],
+    },
+    "Pleura": {
+        "Visceral pleura": [],
+        "Parietal pleura": ["Costal pleura", "Mediastinal pleura", "Diaphragmatic pleura", "Cervical pleura (cupula)"],
+        "Pleural cavity (fluid)": [],
+        "Pleural recesses": ["Costodiaphragmatic recess", "Costomediastinal recess"],
+    },
+    "Respiratory Muscles & Mechanics": {
+        "Primary muscles": ["Diaphragm", "External intercostals"],
+        "Accessory muscles (increased work of breathing)": ["Sternocleidomastoid", "Scalenes", "Pectoralis major/minor (fixed shoulder girdle)"],
+        "Expiration (active)": ["Internal intercostals", "Abdominal muscles (rectus abdominis, obliques, transversus abdominis)"],
+        "Chest wall & mechanics": ["Rib cage", "Pleural pressure", "Alveolar pressure", "Compliance (lung & chest wall)", "Airway resistance"],
+    },
+    "Pulmonary Circulation (Resp-specific)": {
+        "Pulmonary arteries": ["Pulmonary trunk", "Right pulmonary artery", "Left pulmonary artery", "Arterioles"],
+        "Pulmonary capillaries": [],
+        "Pulmonary veins": ["Pulmonary veins (4)"],
+    },
+    "Neural Control of Breathing": {
+        "Central control": ["Medulla (respiratory rhythm generators)", "Pons (modulation of breathing pattern)"],
+        "Peripheral receptors": [
+            "Central chemoreceptors (CO₂/pH sensing)",
+            "Peripheral chemoreceptors (carotid bodies, aortic bodies)",
+            "Pulmonary stretch receptors",
+            "Irritant receptors",
+            "J (juxtacapillary) receptors",
+        ],
+        "Motor pathways": ["Phrenic nerve (C3–C5)", "Intercostal nerves"],
+    },
+    "Airway Defence & Clearance": {
+        "Mucociliary escalator": ["Ciliated epithelium", "Goblet cells", "Mucus layer"],
+        "Cough & sneeze reflex": [],
+        "Local immune defence": ["Alveolar macrophages", "Secretory IgA (upper airways)", "Bronchus-associated lymphoid tissue (BALT)"],
+    },
+    "Foetal/Paediatric Respiratory Structures": {
+        "Foetal lung development stages": ["Embryonic stage", "Pseudoglandular stage", "Canalicular stage", "Saccular stage", "Alveolar stage"],
+        "Surfactant": ["Produced by Type II pneumocytes", "Increases late gestation (clinical relevance for prematurity)"],
+        "Neonatal/paeds anatomy considerations": ["Narrower airways (higher resistance)", "More compliant chest wall", "Higher oxygen consumption", "Obligate nasal breathing (especially infants)"],
+    },
+}
+
+# ---- NEURO_TREE (unchanged from your previous code; not expanded here) ----
+# To keep this file readable, paste your full NEURO_TREE from the previous message.
+# If you want a single complete file, just replace this placeholder with your NEURO_TREE.
+NEURO_TREE = {
+    "Central Nervous System (CNS)": {
+        "Brain": {
+            "Cerebrum": {
+                "Cerebral hemispheres": ["Left hemisphere", "Right hemisphere"],
+                "Lobes": ["Frontal lobe", "Parietal lobe", "Temporal lobe", "Occipital lobe", "Insula"],
+            }
+        }
+    }
+}
+
+# ============================================================
+# GASTROINTESTINAL TREE (Comprehensive hierarchy)
+# ============================================================
+GI_TREE = {
+    "Oral Cavity & Salivary Apparatus": {
+        "Oral cavity": [
+            "Lips",
+            "Teeth",
+            "Tongue",
+            "Hard palate",
+            "Soft palate",
+            "Gingivae",
+            "Buccal mucosa",
+            "Floor of mouth",
+        ],
+        "Salivary glands": {
+            "Major salivary glands": [
+                "Parotid gland",
+                "Submandibular gland",
+                "Sublingual gland",
+            ],
+            "Minor salivary glands (overview)": [],
+            "Salivary ducts": [
+                "Stensen duct (parotid)",
+                "Wharton duct (submandibular)",
+                "Rivinus ducts (sublingual, overview)",
+            ],
+        },
+        "Pharynx (shared region)": [
+            "Oropharynx (swallowing pathway)",
+            "Laryngopharynx (hypopharynx, swallowing pathway)",
+        ],
+        "Swallowing (deglutition, overview)": [
+            "Oral phase",
+            "Pharyngeal phase",
+            "Oesophageal phase",
+        ],
+    },
+
+    "Oesophagus": {
+        "Segments": [
+            "Cervical oesophagus",
+            "Thoracic oesophagus",
+            "Abdominal oesophagus",
+        ],
+        "Sphincters": [
+            "Upper oesophageal sphincter (UES)",
+            "Lower oesophageal sphincter (LES)",
+        ],
+        "Layers (overview)": [
+            "Mucosa",
+            "Submucosa",
+            "Muscularis propria",
+            "Adventitia",
+        ],
+    },
+
+    "Stomach": {
+        "Regions": [
+            "Cardia",
+            "Fundus",
+            "Body",
+            "Antrum",
+            "Pylorus",
+        ],
+        "Sphincter": ["Pyloric sphincter"],
+        "Curvatures": ["Greater curvature", "Lesser curvature"],
+        "Cell types (overview)": [
+            "Parietal cells (acid, intrinsic factor)",
+            "Chief cells (pepsinogen)",
+            "Mucous cells",
+            "G cells (gastrin)",
+            "ECL cells (histamine, overview)",
+        ],
+        "Layers (overview)": [
+            "Mucosa",
+            "Submucosa",
+            "Muscularis (incl. oblique layer)",
+            "Serosa",
+        ],
+    },
+
+    "Small Intestine": {
+        "Segments": [
+            "Duodenum",
+            "Jejunum",
+            "Ileum",
+        ],
+        "Mucosal structures": [
+            "Plicae circulares",
+            "Villi",
+            "Microvilli (brush border)",
+            "Crypts of Lieberkühn",
+        ],
+        "Specialised cells (overview)": [
+            "Enterocytes",
+            "Goblet cells",
+            "Paneth cells",
+            "Enteroendocrine cells",
+            "M cells (Peyer patches-associated)",
+        ],
+        "Lymphoid tissue": [
+            "Peyer patches (ileum)",
+            "GALT (gut-associated lymphoid tissue, overview)",
+        ],
+        "Sphincters/valves (overview)": [
+            "Ileocecal valve",
+        ],
+    },
+
+    "Large Intestine": {
+        "Segments": [
+            "Caecum",
+            "Appendix",
+            "Ascending colon",
+            "Transverse colon",
+            "Descending colon",
+            "Sigmoid colon",
+            "Rectum",
+            "Anal canal",
+        ],
+        "Anal sphincters": [
+            "Internal anal sphincter",
+            "External anal sphincter",
+        ],
+        "Features (overview)": [
+            "Haustra",
+            "Taeniae coli",
+            "Appendices epiploicae",
+        ],
+        "Mucosa (overview)": [
+            "No villi (compared with small intestine)",
+            "Crypts (glands) in colon",
+        ],
+    },
+
+    "Liver": {
+        "Gross anatomy": [
+            "Right lobe",
+            "Left lobe",
+            "Caudate lobe (overview)",
+            "Quadrate lobe (overview)",
+        ],
+        "Microscopic/functional units": [
+            "Hepatic lobule (overview)",
+            "Portal triad (hepatic artery, portal vein, bile duct)",
+            "Hepatocytes",
+            "Kupffer cells",
+            "Sinusoids",
+            "Central vein",
+        ],
+        "Blood supply (overview)": [
+            "Hepatic artery",
+            "Portal vein",
+            "Hepatic veins",
+        ],
+    },
+
+    "Gallbladder & Biliary Tree": {
+        "Gallbladder": ["Fundus", "Body", "Neck"],
+        "Bile ducts": [
+            "Right hepatic duct",
+            "Left hepatic duct",
+            "Common hepatic duct",
+            "Cystic duct",
+            "Common bile duct (CBD)",
+        ],
+        "Ampulla & sphincter": [
+            "Ampulla of Vater (hepatopancreatic ampulla)",
+            "Sphincter of Oddi",
+        ],
+    },
+
+    "Pancreas": {
+        "Regions": ["Head", "Uncinate process (overview)", "Neck (overview)", "Body", "Tail"],
+        "Exocrine pancreas": [
+            "Acinar cells",
+            "Ductal cells",
+        ],
+        "Endocrine pancreas": [
+            "Islets of Langerhans (overview)",
+            "Alpha cells (glucagon)",
+            "Beta cells (insulin)",
+            "Delta cells (somatostatin)",
+            "PP cells (pancreatic polypeptide, overview)",
+        ],
+        "Pancreatic ducts": [
+            "Main pancreatic duct (Wirsung)",
+            "Accessory pancreatic duct (Santorini, overview)",
+        ],
+    },
+
+    "Peritoneum & Mesenteries": {
+        "Peritoneum": ["Parietal peritoneum", "Visceral peritoneum"],
+        "Peritoneal cavity (overview)": [],
+        "Mesenteries/omentum": [
+            "Mesentery of small intestine",
+            "Transverse mesocolon",
+            "Sigmoid mesocolon",
+            "Greater omentum",
+            "Lesser omentum",
+        ],
+    },
+
+    "GI Vasculature (overview)": {
+        "Arterial supply": [
+            "Celiac trunk",
+            "Superior mesenteric artery (SMA)",
+            "Inferior mesenteric artery (IMA)",
+        ],
+        "Portal venous system": [
+            "Portal vein",
+            "Splenic vein",
+            "Superior mesenteric vein (SMV)",
+            "Inferior mesenteric vein (IMV, overview)",
+        ],
+        "Lymphatics (overview)": [
+            "Mesenteric lymph nodes",
+            "Lacteals (intestinal lymphatics, overview)",
+        ],
+    },
+
+    "GI Innervation (overview)": {
+        "Enteric nervous system": [
+            "Myenteric (Auerbach) plexus",
+            "Submucosal (Meissner) plexus",
+        ],
+        "Parasympathetic": [
+            "Vagus nerve (foregut & midgut)",
+            "Pelvic splanchnic nerves (hindgut)",
+        ],
+        "Sympathetic (overview)": [
+            "Splanchnic nerves",
+            "Prevertebral ganglia (celiac, superior mesenteric, inferior mesenteric)",
+        ],
+    },
+
+    "Foetal/Paediatric GI Structures": {
+        "Embryologic gut divisions": [
+            "Foregut",
+            "Midgut",
+            "Hindgut",
+        ],
+        "Key paeds structures/topics": [
+            "Meckel diverticulum (vitelline duct remnant)",
+            "Malrotation/volvulus (overview)",
+            "Hirschsprung disease (aganglionosis, overview)",
+        ],
+        "Liver/bile in neonates (overview)": [
+            "Physiologic jaundice context",
+            "Biliary atresia (overview)",
+        ],
+    },
+}
 
 # ============================================================
 # NEPHRO-UROLOGY TREE (Comprehensive hierarchy)
