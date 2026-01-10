@@ -926,6 +926,537 @@ ENDO_TREE = {
     },
 }
 
+# ============================
+# ADD THIS: HAEMATOLOGY TREE
+# ============================
+HEME_TREE = {
+    "Blood": {
+        "Plasma": {
+            "Water": [],
+            "Electrolytes": ["Sodium", "Potassium", "Chloride", "Bicarbonate", "Calcium", "Magnesium", "Phosphate"],
+            "Proteins": ["Albumin", "Globulins", "Fibrinogen", "Complement proteins (overview)"],
+            "Other solutes (overview)": ["Glucose", "Lipids", "Hormones", "Waste products (urea, creatinine, bilirubin)"],
+        },
+        "Cellular components": {
+            "Red blood cells (Erythrocytes)": {
+                "Structure": ["Biconcave disc", "Cell membrane & cytoskeleton (spectrin, ankyrin) (overview)"],
+                "Haemoglobin (Hb)": ["Haem", "Globin chains", "Oxygen dissociation (overview)"],
+                "RBC lifespan & removal": ["Reticuloendothelial system (spleen/liver) (overview)"],
+            },
+            "White blood cells (Leukocytes)": {
+                "Neutrophils": ["Primary granules (azurophilic) (overview)", "Secondary granules (overview)", "NETs (overview)"],
+                "Lymphocytes": {
+                    "B cells": ["Plasma cells (differentiation) (overview)", "Antibody production (overview)"],
+                    "T cells": ["CD4+ helper T cells (overview)", "CD8+ cytotoxic T cells (overview)", "T-regulatory cells (overview)"],
+                    "NK cells": [],
+                },
+                "Monocytes / Macrophages": ["Phagocytosis (overview)", "Antigen presentation (overview)"],
+                "Eosinophils": ["Parasitic defence (overview)", "Allergy/asthma role (overview)"],
+                "Basophils / Mast cells (linked)": ["Histamine release (overview)", "IgE-mediated reactions (overview)"],
+            },
+            "Platelets (Thrombocytes)": {
+                "Origin": ["Megakaryocytes (bone marrow)"],
+                "Granules": ["Alpha granules (vWF, fibrinogen, factor V) (overview)", "Dense granules (ADP, Ca2+) (overview)"],
+                "Primary haemostasis role": ["Adhesion", "Activation", "Aggregation"],
+            },
+        },
+    },
+
+    "Haematopoiesis": {
+        "Sites (by age)": [
+            "Yolk sac (early embryo)",
+            "Liver (foetus)",
+            "Spleen (foetus)",
+            "Bone marrow (late foetus → childhood/adult)",
+        ],
+        "Bone marrow": {
+            "Red marrow": [],
+            "Yellow marrow (fatty)": [],
+            "Stem cell niches (overview)": ["Haematopoietic stem cell (HSC) niche", "Stromal support (overview)"],
+        },
+        "Haematopoietic hierarchy": {
+            "Haematopoietic stem cell (HSC)": [],
+            "Common myeloid progenitor (CMP)": [
+                "Erythroid lineage (overview)",
+                "Megakaryocyte lineage (overview)",
+                "Granulocyte/monocyte lineages (overview)",
+            ],
+            "Common lymphoid progenitor (CLP)": ["B lineage", "T lineage", "NK lineage"],
+        },
+        "Key growth factors (overview)": [
+            "Erythropoietin (EPO)",
+            "Thrombopoietin (TPO)",
+            "G-CSF",
+            "GM-CSF",
+            "IL-3",
+            "IL-7 (lymphoid development)",
+        ],
+    },
+
+    "Red Cell System": {
+        "Erythropoiesis": [
+            "Proerythroblast",
+            "Basophilic erythroblast",
+            "Polychromatic erythroblast",
+            "Orthochromatic erythroblast",
+            "Reticulocyte",
+            "Mature erythrocyte",
+        ],
+        "Haemoglobin types": [
+            "HbA (α2β2)",
+            "HbA2 (α2δ2)",
+            "HbF (α2γ2)",
+        ],
+        "Iron metabolism": {
+            "Absorption": ["Duodenum (primary site)", "DMT1 (overview)", "Heme iron vs non-heme iron (overview)"],
+            "Transport": ["Transferrin"],
+            "Storage": ["Ferritin", "Haemosiderin (overview)"],
+            "Regulation": ["Hepcidin", "Ferroportin (overview)"],
+        },
+        "Vitamin support": ["Folate", "Vitamin B12"],
+        "Haemolysis (overview)": {
+            "Extravascular haemolysis": ["Splenic macrophages"],
+            "Intravascular haemolysis": ["Free Hb", "Haptoglobin consumption (overview)"],
+        },
+        "Blood groups": {
+            "ABO system": ["A antigen", "B antigen", "O (no A/B antigens)"],
+            "Rhesus system": ["Rh(D) antigen (overview)"],
+            "Compatibility concepts (overview)": ["Crossmatch", "Antibodies (IgM vs IgG)"],
+        },
+    },
+
+    "White Cell / Immune Haematology": {
+        "Innate immunity (haematology link)": [
+            "Neutrophil response",
+            "Monocyte/macrophage response",
+            "Complement (overview)",
+        ],
+        "Adaptive immunity (haematology link)": [
+            "B-cell antibody response",
+            "T-cell mediated response",
+        ],
+        "Lymphoid organs (functional)": {
+            "Primary lymphoid organs": ["Bone marrow", "Thymus"],
+            "Secondary lymphoid organs": ["Lymph nodes", "Spleen", "MALT (overview)"],
+        },
+    },
+
+    "Haemostasis & Coagulation": {
+        "Vessel wall / Endothelium (overview)": ["vWF release", "Anticoagulant surface properties (overview)"],
+        "Primary haemostasis (platelet plug)": [
+            "Adhesion (vWF–GpIb)",
+            "Activation (shape change, granule release)",
+            "Aggregation (GpIIb/IIIa–fibrinogen bridges)",
+        ],
+        "Secondary haemostasis (coagulation cascade)": {
+            "Intrinsic pathway": ["Factor XII", "Factor XI", "Factor IX", "Factor VIII"],
+            "Extrinsic pathway": ["Factor VII", "Tissue factor"],
+            "Common pathway": ["Factor X", "Factor V", "Prothrombin (Factor II)", "Fibrinogen (Factor I)", "Factor XIII"],
+        },
+        "Vitamin K–dependent factors": ["II", "VII", "IX", "X", "Protein C", "Protein S"],
+        "Natural anticoagulants": ["Antithrombin", "Protein C", "Protein S", "TFPI (overview)"],
+        "Fibrinolysis": ["Plasminogen", "Plasmin", "tPA (overview)", "D-dimer (fibrin breakdown product, overview)"],
+        "Laboratory tests (overview)": [
+            "FBC / CBC",
+            "Peripheral blood film",
+            "Reticulocyte count",
+            "PT/INR",
+            "aPTT",
+            "Fibrinogen",
+            "D-dimer",
+        ],
+    },
+
+    "Haemoglobinopathies & RBC Disorders (overview modules)": {
+        "Sickle cell disease": [
+            "HbS mutation (β chain) (overview)",
+            "Vaso-occlusion (overview)",
+            "Haemolysis (overview)",
+        ],
+        "Thalassaemias": [
+            "Alpha thalassaemia (overview)",
+            "Beta thalassaemia (overview)",
+        ],
+        "Membrane disorders": [
+            "Hereditary spherocytosis (overview)",
+            "Hereditary elliptocytosis (overview)",
+        ],
+        "Enzyme disorders": [
+            "G6PD deficiency (overview)",
+            "Pyruvate kinase deficiency (overview)",
+        ],
+    },
+
+    "Bleeding & Clotting Disorders (overview modules)": {
+        "Platelet disorders": [
+            "Quantitative (thrombocytopenia) (overview)",
+            "Qualitative platelet dysfunction (overview)",
+        ],
+        "Coagulation factor deficiencies": [
+            "Haemophilia A (Factor VIII) (overview)",
+            "Haemophilia B (Factor IX) (overview)",
+            "von Willebrand disease (vWF) (overview)",
+        ],
+        "Consumptive coagulopathy": ["DIC (overview)"],
+        "Thrombosis (overview)": [
+            "Virchow triad",
+            "Inherited thrombophilias (overview)",
+        ],
+    },
+
+    "Transfusion Medicine (overview)": {
+        "Components": [
+            "Packed red cells",
+            "Platelets",
+            "Fresh frozen plasma (FFP)",
+            "Cryoprecipitate",
+        ],
+        "Reactions (overview)": [
+            "Acute haemolytic reaction",
+            "Febrile non-haemolytic reaction",
+            "Allergic reaction",
+            "TRALI (overview)",
+            "TACO (overview)",
+        ],
+    },
+
+    "Paediatric Haematology (MRCPCH-relevant)": {
+        "Normal paediatric variations (overview)": [
+            "Physiologic anaemia of infancy",
+            "Age-related WBC differentials (overview)",
+        ],
+        "Neonatal issues (overview)": [
+            "Haemolytic disease of the newborn (ABO/Rh) (overview)",
+            "Vitamin K deficiency bleeding (overview)",
+        ],
+        "Malignancy link (overview)": [
+            "Leukaemia basics (overview)",
+            "Lymphoma basics (overview)",
+        ],
+    },
+}
+
+# ============================
+# ADD THIS: IMMUNOLOGY TREE
+# ============================
+IMM_TREE = {
+    "Immune System Overview": {
+        "Innate immunity": [
+            "Physical barriers (skin, mucosa)",
+            "Chemical barriers (pH, lysozyme, defensins)",
+            "Cellular responses (phagocytes, NK cells)",
+            "Complement system (overview)",
+            "Inflammation (overview)",
+            "Fever (overview)",
+        ],
+        "Adaptive immunity": [
+            "Humoral immunity (B cells, antibodies)",
+            "Cell-mediated immunity (T cells)",
+            "Immunological memory",
+            "Tolerance (self vs non-self, overview)",
+        ],
+    },
+
+    "Primary Lymphoid Organs": {
+        "Bone marrow": {
+            "Haematopoietic stem cells (HSCs)": [],
+            "B cell development": [
+                "Pro-B cell",
+                "Pre-B cell",
+                "Immature B cell",
+                "Mature naive B cell",
+            ],
+            "Central tolerance (B cells)": [
+                "Clonal deletion (overview)",
+                "Receptor editing (overview)",
+                "Anergy (overview)",
+            ],
+        },
+        "Thymus": {
+            "Anatomy": [
+                "Cortex",
+                "Medulla",
+                "Hassall corpuscles (overview)",
+            ],
+            "T cell development": [
+                "Double negative (CD4-/CD8-) stage (overview)",
+                "Double positive (CD4+/CD8+) stage (overview)",
+                "Single positive (CD4+ or CD8+) stage (overview)",
+            ],
+            "Selection": [
+                "Positive selection (MHC restriction, overview)",
+                "Negative selection (central tolerance, overview)",
+            ],
+        },
+    },
+
+    "Secondary Lymphoid Organs": {
+        "Lymph nodes": {
+            "Anatomy": [
+                "Capsule",
+                "Cortex (B cell follicles)",
+                "Paracortex (T cell zone)",
+                "Medulla (cords & sinuses)",
+            ],
+            "Lymph flow": [
+                "Afferent lymphatics",
+                "Subcapsular sinus",
+                "Medullary sinuses",
+                "Efferent lymphatics",
+            ],
+            "Germinal centre reaction (overview)": [
+                "Somatic hypermutation",
+                "Class-switch recombination",
+                "Affinity maturation",
+                "Plasma cell formation",
+                "Memory B cell formation",
+            ],
+        },
+        "Spleen": {
+            "White pulp": [
+                "PALS (periarteriolar lymphoid sheath, T cells)",
+                "Follicles (B cells)",
+                "Marginal zone (overview)",
+            ],
+            "Red pulp": [
+                "Splenic cords",
+                "Sinusoids",
+                "RBC clearance (RES function, overview)",
+            ],
+        },
+        "MALT (mucosa-associated lymphoid tissue)": {
+            "GALT": [
+                "Peyer patches",
+                "Appendix lymphoid tissue (overview)",
+            ],
+            "Tonsils/adenoids": [
+                "Palatine tonsils",
+                "Pharyngeal tonsil (adenoids)",
+                "Lingual tonsils",
+            ],
+            "BALT (overview)": [],
+        },
+    },
+
+    "Innate Immune Cells": {
+        "Neutrophils": [
+            "Chemotaxis",
+            "Phagocytosis",
+            "Respiratory burst (overview)",
+            "Degranulation (overview)",
+            "NET formation (overview)",
+        ],
+        "Monocytes / Macrophages": [
+            "Phagocytosis",
+            "Antigen presentation (MHC II)",
+            "Cytokine production (overview)",
+        ],
+        "Dendritic cells": [
+            "Antigen capture",
+            "Migration to lymph nodes",
+            "T cell priming (overview)",
+        ],
+        "Natural killer (NK) cells": [
+            "Recognition of low MHC I (overview)",
+            "Cytotoxicity (perforin/granzyme, overview)",
+            "ADCC (antibody-dependent cellular cytotoxicity, overview)",
+        ],
+        "Eosinophils": [
+            "Helminth defence (overview)",
+            "Allergic inflammation (overview)",
+        ],
+        "Basophils / Mast cells": [
+            "IgE receptor (FcεRI, overview)",
+            "Degranulation (histamine, leukotrienes) (overview)",
+        ],
+    },
+
+    "Adaptive Immune Cells": {
+        "B cells": {
+            "Maturation states (overview)": [
+                "Naive B cell",
+                "Activated B cell",
+                "Plasma cell",
+                "Memory B cell",
+            ],
+            "Functions": [
+                "Antibody production",
+                "Antigen presentation (MHC II)",
+                "Cytokine production (overview)",
+            ],
+        },
+        "T cells": {
+            "CD4+ helper T cells": {
+                "Th1": ["IFN-γ (overview)", "Intracellular pathogen response (overview)"],
+                "Th2": ["IL-4/IL-5/IL-13 (overview)", "Helminths/allergy (overview)"],
+                "Th17": ["IL-17 (overview)", "Neutrophil recruitment (overview)"],
+                "Tfh": ["Germinal centre help (overview)"],
+            },
+            "CD8+ cytotoxic T cells": [
+                "Perforin/granzyme killing (overview)",
+                "Fas–FasL apoptosis (overview)",
+            ],
+            "Regulatory T cells (Treg)": [
+                "Immune tolerance (overview)",
+                "IL-10/TGF-β (overview)",
+            ],
+        },
+    },
+
+    "Antigen Presentation & MHC": {
+        "Antigen-presenting cells (APCs)": [
+            "Dendritic cells",
+            "Macrophages",
+            "B cells",
+        ],
+        "MHC Class I": [
+            "All nucleated cells",
+            "Presents endogenous antigens to CD8+ T cells",
+        ],
+        "MHC Class II": [
+            "Professional APCs",
+            "Presents exogenous antigens to CD4+ T cells",
+        ],
+        "Co-stimulation (overview)": [
+            "CD80/86 (B7) – CD28",
+            "CD40 – CD40L",
+        ],
+    },
+
+    "Antibodies (Immunoglobulins)": {
+        "Structure": [
+            "Heavy chain",
+            "Light chain",
+            "Fab region",
+            "Fc region",
+        ],
+        "Isotypes": {
+            "IgG": ["Most abundant", "Placental transfer (neonatal immunity)", "Opsonisation (overview)"],
+            "IgA": ["Mucosal immunity", "Secretory IgA (breast milk)"],
+            "IgM": ["Primary response", "Strong complement activator (overview)"],
+            "IgE": ["Allergy", "Parasite defence (overview)"],
+            "IgD": ["B cell receptor role (overview)"],
+        },
+        "Functions": [
+            "Neutralisation",
+            "Opsonisation",
+            "Complement activation",
+            "ADCC (overview)",
+        ],
+    },
+
+    "Complement System": {
+        "Pathways": {
+            "Classical pathway": ["Triggered by IgG/IgM immune complexes (overview)"],
+            "Lectin pathway": ["MBL (mannose-binding lectin) (overview)"],
+            "Alternative pathway": ["Spontaneous activation on microbial surfaces (overview)"],
+        },
+        "Key components (overview)": [
+            "C3 (central component)",
+            "C5 convertase (overview)",
+            "MAC (C5b-9)",
+        ],
+        "Main outcomes": [
+            "Opsonisation (C3b)",
+            "Inflammation (C3a, C5a)",
+            "Cell lysis (MAC)",
+        ],
+        "Regulation (overview)": [
+            "Factor H/I",
+            "DAF (CD55)",
+            "CD59",
+        ],
+    },
+
+    "Cytokines & Signalling (overview)": {
+        "Pro-inflammatory cytokines": ["IL-1", "IL-6", "TNF-α"],
+        "Antiviral cytokines": ["Type I interferons (IFN-α/β)"],
+        "T cell-related cytokines (overview)": ["IL-2", "IFN-γ", "IL-4", "IL-5", "IL-17"],
+        "Chemokines (overview)": ["IL-8 (CXCL8) and others"],
+    },
+
+    "Hypersensitivity Reactions": {
+        "Type I (IgE-mediated)": [
+            "Allergic rhinitis (overview)",
+            "Asthma (overview)",
+            "Anaphylaxis (overview)",
+        ],
+        "Type II (antibody-mediated)": [
+            "Autoimmune haemolytic anaemia (overview)",
+            "Goodpasture syndrome (overview)",
+        ],
+        "Type III (immune complex)": [
+            "Serum sickness (overview)",
+            "Post-streptococcal glomerulonephritis (overview)",
+        ],
+        "Type IV (delayed-type, T cell-mediated)": [
+            "Contact dermatitis (overview)",
+            "TB skin test reaction (overview)",
+        ],
+    },
+
+    "Autoimmunity & Tolerance (overview)": {
+        "Central tolerance": ["Thymic negative selection", "Bone marrow B cell editing (overview)"],
+        "Peripheral tolerance": ["Anergy", "Treg suppression", "Immune privilege (overview)"],
+        "Autoimmune disease concepts (overview)": [
+            "Genetic predisposition",
+            "Environmental triggers",
+            "Molecular mimicry (overview)",
+        ],
+    },
+
+    "Immunodeficiency": {
+        "Primary (congenital) immunodeficiencies (overview)": {
+            "B cell defects": [
+                "X-linked agammaglobulinaemia (overview)",
+                "Common variable immunodeficiency (overview)",
+            ],
+            "T cell defects": [
+                "DiGeorge syndrome (overview)",
+            ],
+            "Combined immunodeficiency": [
+                "SCID (overview)",
+            ],
+            "Phagocyte defects": [
+                "Chronic granulomatous disease (overview)",
+                "Leukocyte adhesion deficiency (overview)",
+            ],
+            "Complement deficiencies (overview)": [
+                "C3 deficiency (overview)",
+                "C5-9 deficiency (Neisseria risk, overview)",
+            ],
+        },
+        "Secondary (acquired) immunodeficiencies (overview)": [
+            "HIV (overview)",
+            "Malnutrition (overview)",
+            "Immunosuppressive medications (steroids/chemo, overview)",
+            "Asplenia/splenectomy (infection risk, overview)",
+        ],
+    },
+
+    "Vaccinology & Paediatric Immunology": {
+        "Vaccine types": [
+            "Live attenuated vaccines (overview)",
+            "Inactivated vaccines (overview)",
+            "Subunit/conjugate vaccines (overview)",
+            "Toxoid vaccines (overview)",
+            "mRNA/viral vector concepts (overview)",
+        ],
+        "Immune response to vaccination": [
+            "Primary response",
+            "Booster (secondary response)",
+            "Memory cell formation",
+        ],
+        "Passive immunity": [
+            "Placental IgG transfer",
+            "Breast milk secretory IgA",
+        ],
+        "Paediatric red flags (overview)": [
+            "Recurrent severe infections",
+            "Poor growth / chronic diarrhoea (immunodeficiency clue)",
+        ],
+    },
+}
 
 # ----------------------------
 # Helpers for hierarchical navigation (generalised)
@@ -998,8 +1529,29 @@ def init_state():
     st.session_state.setdefault("gi_path", [])
     st.session_state.setdefault("renal_path", [])
     st.session_state.setdefault("endo_path", [])
+    st.session_state.setdefault("heme_path", [])
+    st.session_state.setdefault("imm_path", [])
+    st.session_state.setdefault("onc_path", [])
+    st.session_state.setdefault("msk_path", [])
+    st.session_state.setdefault("derm_path", [])
+    st.session_state.setdefault("ent_path", [])
+    st.session_state.setdefault("oph_path", [])
+    st.session_state.setdefault("psych_path", [])
 
-path_list = ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path", "endo_path"]
+path_list = ["cardio_path",
+             "resp_path",
+             "neuro_path",
+             "gi_path",
+             "renal_path",
+             "endo_path",
+             "heme_path",
+             "imm_path",
+             "onc_path",
+             "msk_path",
+             "derm_path", 
+             "ent_path",
+             "oph_path",
+             "psych_path"]
 
 def go_home():
     st.session_state.route = "home"
@@ -1049,6 +1601,53 @@ def go_endo_tree():
     for k in path_list:
         reset_nav(k)
 
+def go_heme_tree():
+    st.session_state.route = "heme_tree"
+    st.session_state.selected_system_id = "heme"
+    for k in path_list:
+        reset_nav(k)
+
+def go_imm_tree():
+    st.session_state.route = "imm_tree"
+    st.session_state.selected_system_id = "imm"
+    for k in path_list:
+        reset_nav(k)
+        
+def go_onc_tree():
+    st.session_state.route = "onc_tree"
+    st.session_state.selected_system_id = "onc"
+    for k in path_list:
+        reset_nav(k)
+
+def go_msk_tree():
+    st.session_state.route = "msk_tree"
+    st.session_state.selected_system_id = "msk"
+    for k in path_list:
+        reset_nav(k)
+
+def go_derm_tree():
+    st.session_state.route = "derm_tree"
+    st.session_state.selected_system_id = "derm"
+    for k in path_list:
+        reset_nav(k)
+
+def go_ent_tree():
+    st.session_state.route = "ent_tree"
+    st.session_state.selected_system_id = "ent"
+    for k in path_list:
+        reset_nav(k)
+        
+def go_oph_tree():
+    st.session_state.route = "oph_tree"
+    st.session_state.selected_system_id = "oph"
+    for k in path_list:
+        reset_nav(k)
+
+def go_psych_tree():
+    st.session_state.route = "psych_tree"
+    st.session_state.selected_system_id = "psych"
+    for k in path_list:
+        reset_nav(k)
 # ----------------------------
 # UI components
 # ----------------------------
@@ -1067,7 +1666,22 @@ def system_card(system):
             go_renal_tree()
         elif system["id"] == "endo":
             go_endo_tree()
-
+        elif system["id"] == "heme":
+            go_heme_tree()
+        elif system["id"] == "imm":
+            go_imm_tree()
+        elif system["id"] == "onc":
+            go_onc_tree()
+        elif system["id"] == "msk":
+            go_msk_tree()
+        elif system["id"] == "derm":
+            go_derm_tree()
+        elif system["id"] == "ent":
+            go_ent_tree()
+        elif system["id"] == "oph":
+            go_oph_tree()
+        elif system["id"] == "psych":
+            go_psych_tree()
 
 def item_card(label, key):
     return st.button(label, key=key, use_container_width=True)
@@ -1171,6 +1785,29 @@ def page_renal_tree():
 def page_endo_tree():
     tree_page("🧪 Endocrine", ENDO_TREE, "endo_path", "Endocrine")
 
+def page_heme_tree():
+    tree_page("🩸 Haematology", HEME_TREE, "heme_path", "Haematology")
+    
+def page_imm_tree():
+    tree_page("🦠 Immunology", IMM_TREE, "imm_path", "Immunology")
+
+def page_onc_tree():
+    tree_page("♋ Oncology", ONC_TREE, "onc_path", "Oncology")
+
+def page_msk_tree():
+    tree_page("🦴 Rheumatology", MSK_TREE, "msk_path", "Rheumatology")
+
+def page_derm_tree():
+    tree_page("🧴 Dermatology", DERM_TREE, "derm_path", "Dermatology")
+
+def page_ent_tree():
+    tree_page("👂 ENT", ENT_TREE, "ent_path", "ENT")
+
+def page_oph_tree():
+    tree_page("👁️ Ophthalmology", OPH_TREE, "oph_path", "Ophthalmology")
+
+def page_psych_tree():
+    tree_page("🧩 Psychology & Development", PSYCH_TREE, "psych_path", "Psychology & Development")
 
 # ----------------------------
 # App entry
@@ -1197,6 +1834,24 @@ def main():
         st.code(" > ".join(st.session_state.gi_path) if st.session_state.gi_path else "(root)")
         st.caption("Renal path:")
         st.code(" > ".join(st.session_state.renal_path) if st.session_state.renal_path else "(root)")
+        st.caption("Endo path:")
+        st.code(" > ".join(st.session_state.endo_path) if st.session_state.endo_path else "(root)")
+        st.caption("Heme path:")
+        st.code(" > ".join(st.session_state.heme_path) if st.session_state.heme_path else "(root)")
+        st.caption("Imm path:")
+        st.code(" > ".join(st.session_state.imm_path) if st.session_state.imm_path else "(root)")
+        st.caption("Onc path:")
+        st.code(" > ".join(st.session_state.onc_path) if st.session_state.onc_path else "(root)")
+        st.caption("MSK path:")
+        st.code(" > ".join(st.session_state.msk_path) if st.session_state.msk_path else "(root)")
+        st.caption("Derm path:")
+        st.code(" > ".join(st.session_state.derm_path) if st.session_state.derm_path else "(root)")
+        st.caption("ENT path:")
+        st.code(" > ".join(st.session_state.ent_path) if st.session_state.ent_path else "(root)")
+        st.caption("Oph path:")
+        st.code(" > ".join(st.session_state.oph_path) if st.session_state.oph_path else "(root)")
+        st.caption("Psych path:")
+        st.code(" > ".join(st.session_state.psych_path) if st.session_state.psych_path else "(root)")
 
     if st.session_state.route == "home":
         page_home()
@@ -1214,7 +1869,24 @@ def main():
         page_renal_tree()
     elif st.session_state.route == "endo_tree":
         page_endo_tree()
+    elif st.session_state.route == "heme_tree":
+        page_heme_tree()
+    elif st.session_state.route == "imm_tree":
+        page_imm_tree()
+    elif st.session_state.route == "onc_tree":
+        page_onc_tree()
+    elif st.session_state.route == "msk_tree":
+        page_msk_tree()
+    elif st.session_state.route == "derm_tree":
+        page_derm_tree()
+    elif st.session_state.route == "ent_tree":
+        page_ent_tree()
+    elif st.session_state.route == "oph_tree":
+        page_oph_tree()
+    elif st.session_state.route == "psych_tree":
+        page_psych_tree()
 
 if __name__ == "__main__":
     main()
+
 
