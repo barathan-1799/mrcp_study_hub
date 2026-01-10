@@ -702,6 +702,231 @@ RENAL_TREE = {
     },
 }
 
+# ============================================================
+# ENDOCRINE TREE (Comprehensive hierarchy)
+# ============================================================
+ENDO_TREE = {
+    "Hypothalamic–Pituitary Axis": {
+        "Hypothalamus": {
+            "Hypothalamic nuclei (overview)": [
+                "Arcuate nucleus",
+                "Paraventricular nucleus",
+                "Supraoptic nucleus",
+                "Ventromedial nucleus",
+                "Lateral hypothalamic area",
+            ],
+            "Releasing / inhibiting hormones": [
+                "CRH (corticotropin-releasing hormone)",
+                "TRH (thyrotropin-releasing hormone)",
+                "GnRH (gonadotropin-releasing hormone)",
+                "GHRH (growth hormone–releasing hormone)",
+                "Somatostatin",
+                "Dopamine (prolactin inhibition)",
+            ],
+        },
+
+        "Pituitary Gland": {
+            "Anterior pituitary (adenohypophysis)": {
+                "Hormones": [
+                    "ACTH",
+                    "TSH",
+                    "GH",
+                    "Prolactin",
+                    "FSH",
+                    "LH",
+                ],
+                "Cell types (overview)": [
+                    "Corticotrophs",
+                    "Thyrotrophs",
+                    "Somatotrophs",
+                    "Lactotrophs",
+                    "Gonadotrophs",
+                ],
+            },
+            "Posterior pituitary (neurohypophysis)": {
+                "Hormones": [
+                    "ADH (vasopressin)",
+                    "Oxytocin",
+                ],
+                "Hypothalamic origin (overview)": [
+                    "Supraoptic nucleus",
+                    "Paraventricular nucleus",
+                ],
+            },
+        },
+    },
+
+    "Thyroid Gland": {
+        "Gross anatomy": [
+            "Right lobe",
+            "Left lobe",
+            "Isthmus",
+            "Pyramidal lobe (variant)",
+        ],
+        "Microscopic structure": [
+            "Thyroid follicles",
+            "Colloid",
+            "Follicular cells",
+            "Parafollicular (C) cells",
+        ],
+        "Hormones": [
+            "Thyroxine (T4)",
+            "Triiodothyronine (T3)",
+            "Calcitonin",
+        ],
+        "Regulation": [
+            "TSH",
+            "Negative feedback (T3/T4)",
+        ],
+    },
+
+    "Parathyroid Glands": {
+        "Number & location": [
+            "Superior parathyroids",
+            "Inferior parathyroids",
+        ],
+        "Cells": [
+            "Chief cells",
+            "Oxyphil cells (overview)",
+        ],
+        "Hormone": [
+            "Parathyroid hormone (PTH)",
+        ],
+        "Physiological actions": [
+            "Bone resorption",
+            "Renal calcium reabsorption",
+            "Vitamin D activation",
+        ],
+    },
+
+    "Adrenal (Suprarenal) Glands": {
+        "Adrenal cortex": {
+            "Zones": [
+                "Zona glomerulosa",
+                "Zona fasciculata",
+                "Zona reticularis",
+            ],
+            "Hormones": {
+                "Zona glomerulosa": ["Aldosterone"],
+                "Zona fasciculata": ["Cortisol"],
+                "Zona reticularis": ["Androgens (DHEA)"],
+            },
+        },
+        "Adrenal medulla": {
+            "Cells": [
+                "Chromaffin cells",
+            ],
+            "Hormones": [
+                "Adrenaline (epinephrine)",
+                "Noradrenaline (norepinephrine)",
+            ],
+        },
+    },
+
+    "Pancreatic Endocrine System": {
+        "Islets of Langerhans": {
+            "Cell types": [
+                "Alpha cells (glucagon)",
+                "Beta cells (insulin)",
+                "Delta cells (somatostatin)",
+                "PP cells (pancreatic polypeptide)",
+            ],
+        },
+        "Hormonal regulation of glucose": [
+            "Insulin",
+            "Glucagon",
+            "Counter-regulatory hormones (overview)",
+        ],
+    },
+
+    "Gonadal Endocrine System": {
+        "Testes": {
+            "Cells": [
+                "Leydig cells",
+                "Sertoli cells",
+            ],
+            "Hormones": [
+                "Testosterone",
+                "Inhibin B",
+                "Anti-Müllerian hormone (foetal)",
+            ],
+        },
+        "Ovaries": {
+            "Structures": [
+                "Follicles",
+                "Corpus luteum",
+            ],
+            "Hormones": [
+                "Oestrogen",
+                "Progesterone",
+                "Inhibin",
+            ],
+        },
+    },
+
+    "Other Endocrine Organs & Tissues": {
+        "Pineal gland": [
+            "Melatonin",
+            "Circadian rhythm regulation",
+        ],
+        "Thymus": [
+            "Thymosin",
+            "T-cell maturation (immuno-endocrine link)",
+        ],
+        "Placenta (pregnancy)": [
+            "hCG",
+            "Progesterone",
+            "Oestrogen",
+            "Human placental lactogen",
+        ],
+        "Kidney (endocrine roles)": [
+            "Renin",
+            "Erythropoietin",
+            "Vitamin D activation",
+        ],
+        "Heart (endocrine role)": [
+            "Atrial natriuretic peptide (ANP)",
+        ],
+        "Adipose tissue": [
+            "Leptin",
+            "Adiponectin (overview)",
+        ],
+    },
+
+    "Endocrine Axes (Functional Pathways)": {
+        "HPA axis": [
+            "CRH → ACTH → Cortisol",
+        ],
+        "HPT axis": [
+            "TRH → TSH → T3/T4",
+        ],
+        "HPG axis": [
+            "GnRH → LH/FSH → Sex steroids",
+        ],
+        "GH–IGF axis": [
+            "GHRH → GH → IGF-1",
+        ],
+    },
+
+    "Paediatric / Developmental Endocrinology": {
+        "Growth & puberty": [
+            "Growth hormone",
+            "IGF-1",
+            "Pubertal staging (Tanner stages, overview)",
+        ],
+        "Congenital endocrine disorders (overview)": [
+            "Congenital hypothyroidism",
+            "Congenital adrenal hyperplasia (CAH)",
+            "Hypopituitarism",
+        ],
+        "Neonatal endocrine adaptations": [
+            "Post-natal glucose regulation",
+            "Calcium homeostasis",
+        ],
+    },
+}
+
+
 # ----------------------------
 # Helpers for hierarchical navigation (generalised)
 # ----------------------------
@@ -772,47 +997,56 @@ def init_state():
     st.session_state.setdefault("neuro_path", [])
     st.session_state.setdefault("gi_path", [])
     st.session_state.setdefault("renal_path", [])
+    st.session_state.setdefault("endo_path", [])
+
+path_list = ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path", "endo_path"]
 
 def go_home():
     st.session_state.route = "home"
     st.session_state.selected_system_id = None
-    for k in ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path"]:
+    for k in path_list:
         reset_nav(k)
 
 def go_system(system_id: str):
     st.session_state.route = "system"
     st.session_state.selected_system_id = system_id
-    for k in ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path"]:
+    for k in path_list:
         reset_nav(k)
 
 def go_cardio_tree():
     st.session_state.route = "cardio_tree"
     st.session_state.selected_system_id = "cardio"
-    for k in ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path"]:
+    for k in path_list:
         reset_nav(k)
 
 def go_resp_tree():
     st.session_state.route = "resp_tree"
     st.session_state.selected_system_id = "resp"
-    for k in ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path"]:
+    for k in path_list:
         reset_nav(k)
 
 def go_neuro_tree():
     st.session_state.route = "neuro_tree"
     st.session_state.selected_system_id = "neuro"
-    for k in ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path"]:
+    for k in path_list:
         reset_nav(k)
 
 def go_gi_tree():
     st.session_state.route = "gi_tree"
     st.session_state.selected_system_id = "gi"
-    for k in ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path"]:
+    for k in path_list:
         reset_nav(k)
 
 def go_renal_tree():
     st.session_state.route = "renal_tree"
     st.session_state.selected_system_id = "renal"
-    for k in ["cardio_path", "resp_path", "neuro_path", "gi_path", "renal_path"]:
+    for k in path_list:
+        reset_nav(k)
+
+def go_endo_tree():
+    st.session_state.route = "endo_tree"
+    st.session_state.selected_system_id = "endo"
+    for k in path_list:
         reset_nav(k)
 
 # ----------------------------
@@ -831,8 +1065,9 @@ def system_card(system):
             go_gi_tree()
         elif system["id"] == "renal":
             go_renal_tree()
-        else:
-            go_system(system["id"])
+        elif system["id"] == "endo":
+            go_endo_tree()
+
 
 def item_card(label, key):
     return st.button(label, key=key, use_container_width=True)
@@ -933,6 +1168,10 @@ def page_gi_tree():
 def page_renal_tree():
     tree_page("🫘 Nephro-urology", RENAL_TREE, "renal_path", "Nephro-urology")
 
+def page_endo_tree():
+    tree_page("🧪 Endocrine", ENDO_TREE, "endo_path", "Endocrine")
+
+
 # ----------------------------
 # App entry
 # ----------------------------
@@ -971,8 +1210,11 @@ def main():
         page_neuro_tree()
     elif st.session_state.route == "gi_tree":
         page_gi_tree()
-    else:
+    elif st.session_state.route == "renal_tree":
         page_renal_tree()
+    elif st.session_state.route == "endo_tree":
+        page_endo_tree()
 
 if __name__ == "__main__":
     main()
+
