@@ -1458,6 +1458,1803 @@ IMM_TREE = {
     },
 }
 
+# ============================
+# ADD THIS: ONCOLOGY TREE
+# ============================
+ONC_TREE = {
+    "Fundamentals of Cancer Biology": {
+        "Definition & hallmarks of cancer": [
+            "Uncontrolled cell proliferation",
+            "Evasion of apoptosis",
+            "Sustained angiogenesis",
+            "Invasion and metastasis",
+            "Immune evasion (overview)",
+            "Genomic instability",
+        ],
+        "Cell cycle & regulation": {
+            "Cell cycle phases": [
+                "G0",
+                "G1",
+                "S",
+                "G2",
+                "M",
+            ],
+            "Key regulators": [
+                "Cyclins",
+                "Cyclin-dependent kinases (CDKs)",
+                "Checkpoint proteins (p53, Rb)",
+            ],
+        },
+        "Genetic basis of cancer": {
+            "Oncogenes": [
+                "Proto-oncogenes",
+                "Gain-of-function mutations",
+                "Examples (overview): RAS, MYC",
+            ],
+            "Tumour suppressor genes": [
+                "Loss-of-function mutations",
+                "Examples (overview): TP53, RB1, APC",
+            ],
+            "DNA repair genes": [
+                "Mismatch repair genes (overview)",
+                "BRCA1/BRCA2 (overview)",
+            ],
+        },
+    },
+
+    "Tumour Classification": {
+        "By tissue of origin": {
+            "Carcinomas": [
+                "Epithelial origin",
+                "Examples: adenocarcinoma, squamous cell carcinoma",
+            ],
+            "Sarcomas": [
+                "Mesenchymal origin",
+                "Examples: osteosarcoma, rhabdomyosarcoma",
+            ],
+            "Haematological malignancies": [
+                "Leukaemias",
+                "Lymphomas",
+                "Plasma cell dyscrasias (overview)",
+            ],
+            "Neuroectodermal tumours": [
+                "Neuroblastoma",
+                "Medulloblastoma",
+            ],
+        },
+        "Benign vs malignant": [
+            "Growth rate",
+            "Invasion",
+            "Metastatic potential",
+            "Degree of differentiation",
+        ],
+    },
+
+    "Paediatric Oncology (Core MRCPCH)": {
+        "Leukaemias": {
+            "Acute lymphoblastic leukaemia (ALL)": [
+                "Most common childhood cancer",
+                "B-cell ALL",
+                "T-cell ALL",
+            ],
+            "Acute myeloid leukaemia (AML)": [],
+            "Chronic leukaemias (rare in children)": [],
+        },
+        "Lymphomas": {
+            "Hodgkin lymphoma": [
+                "Reed–Sternberg cells",
+                "B symptoms (overview)",
+            ],
+            "Non-Hodgkin lymphoma": [
+                "Burkitt lymphoma",
+                "Lymphoblastic lymphoma",
+                "Diffuse large B-cell lymphoma (overview)",
+            ],
+        },
+        "Solid tumours": {
+            "Neuroblastoma": [
+                "Adrenal origin",
+                "N-myc amplification (overview)",
+            ],
+            "Wilms tumour (nephroblastoma)": [
+                "WT1 gene (overview)",
+                "Aniridia association (overview)",
+            ],
+            "Retinoblastoma": [
+                "RB1 gene",
+                "Leukocoria",
+            ],
+            "Brain tumours": [
+                "Medulloblastoma",
+                "Astrocytoma (overview)",
+                "Ependymoma (overview)",
+            ],
+            "Bone & soft tissue tumours": [
+                "Osteosarcoma",
+                "Ewing sarcoma",
+                "Rhabdomyosarcoma",
+            ],
+        },
+    },
+
+    "Tumour Growth & Spread": {
+        "Local invasion": [
+            "Basement membrane breach",
+            "Matrix metalloproteinases (overview)",
+        ],
+        "Metastasis": {
+            "Routes": [
+                "Lymphatic spread",
+                "Haematogenous spread",
+                "Transcoelomic spread (overview)",
+            ],
+            "Steps": [
+                "Detachment",
+                "Invasion",
+                "Intravasation",
+                "Extravasation",
+                "Colonisation",
+            ],
+        },
+        "Angiogenesis": [
+            "VEGF",
+            "Tumour neovascularisation (overview)",
+        ],
+    },
+
+    "Cancer Staging & Grading": {
+        "Staging systems": {
+            "TNM staging": [
+                "Tumour size (T)",
+                "Nodal involvement (N)",
+                "Metastasis (M)",
+            ],
+            "Paediatric staging systems (overview)": [
+                "INSS (neuroblastoma)",
+                "Ann Arbor (lymphoma)",
+            ],
+        },
+        "Grading": [
+            "Degree of differentiation",
+            "Mitotic activity",
+            "Histological appearance",
+        ],
+    },
+
+    "Cancer Diagnosis": {
+        "Clinical features": [
+            "Weight loss",
+            "Fatigue",
+            "Unexplained fever",
+            "Night sweats",
+            "Persistent pain or mass",
+        ],
+        "Laboratory investigations": [
+            "Full blood count",
+            "Peripheral blood film",
+            "Tumour markers (overview)",
+        ],
+        "Imaging": [
+            "Ultrasound",
+            "CT",
+            "MRI",
+            "PET scan (overview)",
+        ],
+        "Tissue diagnosis": [
+            "Biopsy",
+            "Histopathology",
+            "Immunohistochemistry (overview)",
+            "Cytogenetics / molecular testing (overview)",
+        ],
+    },
+
+    "Cancer Treatment Modalities": {
+        "Surgery": [
+            "Curative resection",
+            "Debulking surgery",
+            "Biopsy procedures",
+        ],
+        "Chemotherapy": {
+            "Principles": [
+                "Cell cycle–specific drugs",
+                "Combination therapy",
+            ],
+            "Drug classes (overview)": [
+                "Alkylating agents",
+                "Antimetabolites",
+                "Anthracyclines",
+                "Vinca alkaloids",
+                "Platinum agents",
+            ],
+            "Common side effects": [
+                "Myelosuppression",
+                "Nausea/vomiting",
+                "Mucositis",
+                "Alopecia",
+            ],
+        },
+        "Radiotherapy": [
+            "External beam radiotherapy",
+            "Targeted fields",
+            "Late effects in children (overview)",
+        ],
+        "Targeted & biological therapies": [
+            "Monoclonal antibodies",
+            "Tyrosine kinase inhibitors",
+            "Immune checkpoint inhibitors (overview)",
+        ],
+        "Haematopoietic stem cell transplant (overview)": [
+            "Autologous transplant",
+            "Allogeneic transplant",
+        ],
+    },
+
+    "Oncological Emergencies": {
+        "Tumour lysis syndrome": [
+            "Hyperkalaemia",
+            "Hyperphosphataemia",
+            "Hypocalcaemia",
+            "Hyperuricaemia",
+        ],
+        "Spinal cord compression": [
+            "Back pain",
+            "Neurological deficits",
+        ],
+        "Superior vena cava (SVC) syndrome": [
+            "Facial swelling",
+            "Venous congestion",
+        ],
+        "Febrile neutropenia": [
+            "Neutropenia",
+            "Sepsis risk",
+        ],
+    },
+
+    "Late Effects & Survivorship": {
+        "Growth & development issues": [
+            "Growth hormone deficiency",
+            "Delayed puberty",
+        ],
+        "Organ toxicity": [
+            "Cardiotoxicity (anthracyclines)",
+            "Nephrotoxicity",
+            "Neurotoxicity",
+        ],
+        "Second malignancies": [
+            "Therapy-related cancers (overview)",
+        ],
+        "Psychosocial aspects": [
+            "School reintegration",
+            "Mental health support",
+        ],
+    },
+
+    "Paediatric Red Flags (Exam-Oriented)": {
+        "Unexplained symptoms": [
+            "Persistent lymphadenopathy",
+            "Unexplained bruising",
+            "Bone pain/night pain",
+        ],
+        "Failure to thrive": [],
+        "Recurrent infections (malignancy vs immunodeficiency)": [],
+    },
+}
+
+# ============================
+# ADD THIS: RHEUMATOLOGY TREE
+# ============================
+MSK_TREE = {
+    "Musculoskeletal System (Core Structures)": {
+        "Bones": {
+            "Bone types": ["Long bones", "Short bones", "Flat bones", "Irregular bones", "Sesamoid bones"],
+            "Bone structure": [
+                "Periosteum",
+                "Cortical (compact) bone",
+                "Trabecular (spongy) bone",
+                "Bone marrow (red/yellow) (overview)",
+            ],
+            "Cells": ["Osteoblasts", "Osteoclasts", "Osteocytes"],
+            "Remodelling (overview)": ["RANK/RANKL/OPG axis (overview)", "Wolff's law (overview)"],
+        },
+
+        "Joints": {
+            "Joint types": {
+                "Fibrous joints": ["Sutures", "Syndesmoses", "Gomphoses (overview)"],
+                "Cartilaginous joints": ["Synchondroses", "Symphyses"],
+                "Synovial joints": [
+                    "Hinge",
+                    "Ball-and-socket",
+                    "Pivot",
+                    "Condyloid",
+                    "Saddle",
+                    "Plane/gliding",
+                ],
+            },
+            "Synovial joint anatomy": {
+                "Articular cartilage": ["Hyaline cartilage (most joints)", "Fibrocartilage (some joints) (overview)"],
+                "Synovial membrane": [],
+                "Synovial fluid": [],
+                "Joint capsule": ["Fibrous capsule", "Synovial lining"],
+                "Ligaments": ["Capsular ligaments", "Extracapsular ligaments", "Intracapsular ligaments"],
+                "Menisci / labrum (where present)": ["Menisci (knee)", "Labrum (hip/shoulder)"],
+                "Bursae": ["Prepatellar bursa (example)", "Olecranon bursa (example)"],
+            },
+        },
+
+        "Muscles & Tendons": {
+            "Skeletal muscle": [
+                "Muscle fibres (overview)",
+                "Neuromuscular junction (overview)",
+                "Motor unit concept (overview)",
+            ],
+            "Tendons": ["Tendon insertion", "Enthesis (attachment site)"],
+            "Entheses (rheum relevance)": ["Enthesitis (overview)", "Spondyloarthropathies association (overview)"],
+        },
+
+        "Connective Tissue": {
+            "Collagen": ["Type I", "Type II", "Type III", "Type IV (basement membrane, overview)"],
+            "Elastin (overview)": [],
+            "Proteoglycans / GAGs (overview)": ["Hyaluronic acid", "Chondroitin sulfate", "Keratan sulfate (overview)"],
+        },
+    },
+
+    "Immune-Mediated Rheumatologic Mechanisms": {
+        "Inflammation in joints": [
+            "Synovitis",
+            "Pannus formation (overview)",
+            "Cartilage degradation (overview)",
+            "Bone erosions (overview)",
+        ],
+        "Autoantibodies (overview)": [
+            "ANA",
+            "RF",
+            "Anti-CCP",
+            "ANCA (vasculitis link, overview)",
+        ],
+        "Cytokines (overview)": [
+            "TNF-α",
+            "IL-1",
+            "IL-6",
+            "IL-17",
+        ],
+        "Complement & immune complexes (overview)": [
+            "Immune complex deposition",
+            "Complement activation",
+        ],
+    },
+
+    "Paediatric Rheumatology (Core MRCPCH)": {
+        "Juvenile Idiopathic Arthritis (JIA)": {
+            "Subtypes": [
+                "Oligoarticular JIA",
+                "Polyarticular RF-negative JIA",
+                "Polyarticular RF-positive JIA",
+                "Systemic JIA (Still disease)",
+                "Enthesitis-related arthritis (ERA)",
+                "Psoriatic JIA",
+                "Undifferentiated JIA",
+            ],
+            "Key features": [
+                "Morning stiffness",
+                "Joint swelling",
+                "Reduced range of motion",
+                "Pain may be absent in young children",
+            ],
+            "Complications": [
+                "Uveitis (esp. oligoarticular)",
+                "Growth disturbance (overview)",
+                "Macrophage activation syndrome (MAS) (systemic JIA)",
+            ],
+        },
+
+        "Vasculitis": {
+            "IgA vasculitis (Henoch–Schönlein purpura)": [
+                "Palpable purpura",
+                "Arthralgia/arthritis",
+                "Abdominal pain",
+                "Renal involvement",
+            ],
+            "Kawasaki disease": [
+                "Prolonged fever",
+                "Mucocutaneous inflammation",
+                "Coronary artery aneurysm risk (overview)",
+            ],
+            "Polyarteritis nodosa (PAN) (overview)": [],
+            "ANCA-associated vasculitis (overview)": ["GPA", "MPA", "EGPA (overview)"],
+        },
+
+        "Connective Tissue / Multisystem Autoimmune": {
+            "Systemic Lupus Erythematosus (SLE)": [
+                "Malar rash (overview)",
+                "Photosensitivity (overview)",
+                "Arthritis",
+                "Renal disease (overview)",
+                "Cytopenias (overview)",
+            ],
+            "Juvenile dermatomyositis": [
+                "Proximal muscle weakness",
+                "Gottron papules (overview)",
+                "Heliotrope rash (overview)",
+            ],
+            "Scleroderma (juvenile) (overview)": [
+                "Localised scleroderma (morphea) (overview)",
+                "Systemic sclerosis (rare) (overview)",
+            ],
+            "Mixed connective tissue disease (overview)": [],
+        },
+
+        "Autoinflammatory Syndromes (overview)": {
+            "Periodic fever syndromes": [
+                "PFAPA",
+                "Familial Mediterranean fever (FMF)",
+                "TRAPS (overview)",
+                "Hyper-IgD syndrome / mevalonate kinase deficiency (overview)",
+            ],
+        },
+    },
+
+    "Bones & Metabolic/MSK Conditions (Rheum-adjacent in paeds)": {
+        "Rickets / Osteomalacia (overview)": [
+            "Vitamin D deficiency rickets",
+            "Calcium deficiency rickets (overview)",
+            "Phosphate-related rickets (overview)",
+        ],
+        "Osteomyelitis vs inflammatory arthritis (overview)": [
+            "Septic arthritis (overview)",
+            "Osteomyelitis (overview)",
+        ],
+        "Non-accidental injury considerations (overview)": [],
+    },
+
+    "Pain & Regional Syndromes": {
+        "Mechanical vs inflammatory pain": [
+            "Inflammatory pain: morning stiffness, improves with movement",
+            "Mechanical pain: worse with activity, improves with rest",
+        ],
+        "Hypermobility spectrum": [
+            "Benign joint hypermobility",
+            "Ehlers–Danlos spectrum (overview)",
+        ],
+        "Chronic pain syndromes (overview)": [
+            "Amplified musculoskeletal pain syndrome",
+            "Juvenile fibromyalgia (overview)",
+        ],
+    },
+
+    "Investigations in Rheumatology (overview)": {
+        "Blood tests": [
+            "ESR",
+            "CRP",
+            "FBC",
+            "ANA",
+            "RF",
+            "Anti-CCP",
+            "Complement levels (C3/C4)",
+            "HLA-B27 (ERA/spondyloarthropathy link)",
+        ],
+        "Imaging": [
+            "X-ray",
+            "Ultrasound (effusion/synovitis)",
+            "MRI (bone marrow oedema/early arthritis)",
+        ],
+        "Joint aspiration (overview)": [
+            "Synovial fluid cell count",
+            "Gram stain & culture",
+            "Crystals (rare in children, overview)",
+        ],
+    },
+
+    "Treatment Modalities (overview)": {
+        "Non-pharmacological": [
+            "Physiotherapy",
+            "Occupational therapy",
+            "Exercise / activity modification",
+            "Psychological support (chronic disease)",
+        ],
+        "NSAIDs": ["Ibuprofen (overview)", "Naproxen (overview)"],
+        "Steroids": ["Oral prednisolone (overview)", "Intra-articular steroid injections (overview)"],
+        "DMARDs": [
+            "Methotrexate",
+            "Sulfasalazine (overview)",
+            "Hydroxychloroquine (overview)",
+        ],
+        "Biologics (overview)": [
+            "Anti-TNF agents (etanercept, adalimumab) (overview)",
+            "IL-1 inhibitors (anakinra) (systemic JIA, overview)",
+            "IL-6 inhibitors (tocilizumab) (overview)",
+        ],
+        "Immunosuppression (selected conditions, overview)": [
+            "Cyclophosphamide (severe vasculitis/SLE, overview)",
+            "Mycophenolate mofetil (SLE, overview)",
+        ],
+    },
+}
+
+# ============================
+# ADD THIS: DERMATOLOGY TREE
+# ============================
+DERM_TREE = {
+    "Skin (Integumentary System)": {
+        "Layers of the skin": {
+            "Epidermis": {
+                "Strata": [
+                    "Stratum basale",
+                    "Stratum spinosum",
+                    "Stratum granulosum",
+                    "Stratum lucidum (palms/soles)",
+                    "Stratum corneum",
+                ],
+                "Cell types": [
+                    "Keratinocytes",
+                    "Melanocytes",
+                    "Langerhans cells",
+                    "Merkel cells",
+                ],
+                "Key functions": [
+                    "Barrier function",
+                    "Keratinisation",
+                    "Pigmentation (melanin)",
+                    "Immune surveillance (overview)",
+                ],
+            },
+            "Dermis": {
+                "Layers": [
+                    "Papillary dermis",
+                    "Reticular dermis",
+                ],
+                "Contents": [
+                    "Collagen (Type I/III)",
+                    "Elastin fibres",
+                    "Fibroblasts",
+                    "Blood vessels",
+                    "Lymphatics",
+                    "Nerves",
+                ],
+            },
+            "Subcutaneous tissue (Hypodermis)": [
+                "Adipose tissue",
+                "Connective tissue septae",
+                "Larger blood vessels",
+                "Larger nerves",
+            ],
+        },
+
+        "Skin appendages": {
+            "Hair": {
+                "Hair follicle": [
+                    "Infundibulum",
+                    "Isthmus",
+                    "Bulb",
+                    "Dermal papilla",
+                ],
+                "Hair shaft": ["Cuticle", "Cortex", "Medulla (overview)"],
+                "Hair cycle": ["Anagen", "Catagen", "Telogen"],
+            },
+            "Nails": [
+                "Nail plate",
+                "Nail bed",
+                "Nail matrix",
+                "Lunula",
+                "Cuticle (eponychium)",
+                "Hyponychium",
+            ],
+            "Sweat glands": {
+                "Eccrine glands": [
+                    "Thermoregulation",
+                    "Distributed widely (overview)",
+                ],
+                "Apocrine glands": [
+                    "Axilla/groin distribution (overview)",
+                    "Pubertal activation (overview)",
+                ],
+            },
+            "Sebaceous glands": [
+                "Sebum production",
+                "Associated with hair follicles (overview)",
+            ],
+        },
+
+        "Skin vasculature & innervation (overview)": {
+            "Blood supply": [
+                "Superficial vascular plexus",
+                "Deep vascular plexus",
+            ],
+            "Lymphatics": ["Superficial lymphatic network (overview)"],
+            "Nerve endings": [
+                "Free nerve endings (pain/temp)",
+                "Meissner corpuscles (light touch)",
+                "Pacinian corpuscles (pressure/vibration)",
+            ],
+        },
+
+        "Skin function": [
+            "Barrier protection",
+            "Thermoregulation",
+            "Sensation",
+            "Immune defence (overview)",
+            "Vitamin D synthesis",
+        ],
+    },
+
+    "Dermatological Lesions (Morphology)": {
+        "Primary lesions": [
+            "Macule",
+            "Patch",
+            "Papule",
+            "Plaque",
+            "Nodule",
+            "Vesicle",
+            "Bulla",
+            "Pustule",
+            "Wheal (urticarial lesion)",
+        ],
+        "Secondary lesions": [
+            "Scale",
+            "Crust",
+            "Erosion",
+            "Ulcer",
+            "Excoriation",
+            "Fissure",
+            "Lichenification",
+            "Atrophy",
+            "Scar",
+        ],
+        "Distribution patterns (overview)": [
+            "Flexural",
+            "Extensor",
+            "Dermatomal",
+            "Photodistributed",
+            "Generalised vs localised",
+        ],
+    },
+
+    "Inflammatory Dermatoses (Paeds Core)": {
+        "Eczema / Dermatitis": {
+            "Atopic dermatitis": [
+                "Flexural eczema (typical older child)",
+                "Cheeks/extensors (infant pattern, overview)",
+                "Pruritus",
+                "Secondary infection risk",
+            ],
+            "Contact dermatitis": [
+                "Irritant contact dermatitis",
+                "Allergic contact dermatitis (Type IV hypersensitivity, overview)",
+            ],
+            "Seborrhoeic dermatitis": [
+                "Cradle cap (infants)",
+                "Scalp/face involvement (overview)",
+            ],
+            "Nappy (diaper) dermatitis": [
+                "Irritant dermatitis",
+                "Candida-associated dermatitis (overview)",
+            ],
+        },
+
+        "Psoriasis": {
+            "Plaque psoriasis": [],
+            "Guttate psoriasis": ["Post-streptococcal association (overview)"],
+            "Nail psoriasis (overview)": ["Pitting", "Onycholysis"],
+        },
+
+        "Urticaria & Angioedema": {
+            "Acute urticaria": ["Often infection-related (overview)"],
+            "Chronic urticaria (overview)": [],
+            "Angioedema (overview)": ["Histaminergic", "Bradykinin-mediated (rare paeds, overview)"],
+        },
+    },
+
+    "Infectious Skin Disorders": {
+        "Bacterial": {
+            "Impetigo": ["Bullous", "Non-bullous"],
+            "Cellulitis / Erysipelas": [],
+            "Folliculitis": [],
+            "Staphylococcal scalded skin syndrome (SSSS) (overview)": [],
+        },
+        "Viral": {
+            "Warts (HPV)": [],
+            "Molluscum contagiosum": [],
+            "Herpes simplex": ["Gingivostomatitis (overview)", "Eczema herpeticum (overview)"],
+            "Varicella (chickenpox) (overview)": [],
+            "Hand-foot-and-mouth disease (enteroviruses) (overview)": [],
+        },
+        "Fungal": {
+            "Tinea corporis": [],
+            "Tinea capitis": [],
+            "Tinea pedis (older children) (overview)": [],
+            "Candidiasis": ["Oral thrush", "Intertrigo (overview)", "Nappy rash (Candida)"],
+        },
+        "Parasitic": {
+            "Scabies": ["Burrows", "Nocturnal itch", "Household spread (overview)"],
+            "Pediculosis (lice) (overview)": ["Head lice", "Body lice (rare)", "Pubic lice (rare)"],
+        },
+    },
+
+    "Pigmentary Disorders": {
+        "Hypopigmentation": [
+            "Vitiligo (autoimmune, overview)",
+            "Pityriasis alba (often eczema-related, overview)",
+            "Albinism (overview)",
+        ],
+        "Hyperpigmentation": [
+            "Post-inflammatory hyperpigmentation",
+            "Café-au-lait macules (overview)",
+            "Acanthosis nigricans (endocrine link, overview)",
+        ],
+        "Birthmarks / naevi (overview)": {
+            "Melanocytic naevi": ["Congenital melanocytic naevus (overview)", "Acquired naevus"],
+            "Vascular lesions": ["Infantile haemangioma", "Port-wine stain (capillary malformation)"],
+        },
+    },
+
+    "Blistering & Severe Reactions (overview)": {
+        "Erythema multiforme": [],
+        "Stevens–Johnson syndrome / TEN (overview)": [],
+        "Autoimmune blistering (rare paeds, overview)": [
+            "Bullous pemphigoid (overview)",
+            "Pemphigus vulgaris (very rare in children, overview)",
+        ],
+    },
+
+    "Acne & Follicular Disorders": {
+        "Acne vulgaris": [
+            "Comedones (open/closed)",
+            "Papules/pustules",
+            "Nodulocystic acne (overview)",
+        ],
+        "Hidradenitis suppurativa (overview)": ["Axillary/groin nodules", "Sinus tracts (overview)"],
+        "Keratosis pilaris": [],
+    },
+
+    "Hair & Nail Disorders": {
+        "Alopecia": {
+            "Alopecia areata": ["Autoimmune", "Exclamation mark hairs (overview)"],
+            "Tinea capitis (infective alopecia link)": [],
+            "Traction alopecia (overview)": [],
+        },
+        "Nail disorders": [
+            "Onychomycosis (overview)",
+            "Paronychia (overview)",
+            "Nail pitting (psoriasis link)",
+            "Clubbing (systemic disease link, overview)",
+        ],
+    },
+
+    "Paediatric Dermatology Special Topics": {
+        "Neonatal rashes (overview)": [
+            "Erythema toxicum neonatorum",
+            "Milia",
+            "Neonatal acne (overview)",
+        ],
+        "Genetic skin disorders (overview)": {
+            "Ichthyosis (overview)": [],
+            "Epidermolysis bullosa (overview)": [],
+            "Neurocutaneous syndromes (overview)": [
+                "Neurofibromatosis (café-au-lait, neurofibromas, overview)",
+                "Tuberous sclerosis (ash-leaf macules, overview)",
+            ],
+        },
+        "Child protection dermatology (overview)": [
+            "Bruising patterns (overview)",
+            "Burns/scalds distribution (overview)",
+        ],
+    },
+
+    "Dermatology Investigations (overview)": {
+        "Clinical": [
+            "Full skin exam",
+            "Dermatoscopy (overview)",
+        ],
+        "Laboratory": [
+            "Skin swab culture (infective lesions)",
+            "Fungal microscopy/culture (tinea)",
+        ],
+        "Procedures": [
+            "Skin scraping (scabies)",
+            "Biopsy (selected cases, overview)",
+            "Patch testing (allergic contact dermatitis, overview)",
+        ],
+    },
+
+    "Dermatology Treatments (overview)": {
+        "Topical therapies": [
+            "Emollients",
+            "Topical corticosteroids (potency ladder, overview)",
+            "Topical calcineurin inhibitors (tacrolimus/pimecrolimus, overview)",
+            "Topical antibiotics (selected cases, overview)",
+            "Antifungals (topical)",
+        ],
+        "Systemic therapies": [
+            "Oral antibiotics (acne/infection, overview)",
+            "Antihistamines (urticaria itch, overview)",
+            "Systemic steroids (selected severe inflammation, overview)",
+            "Immunosuppressants/biologics (severe eczema/psoriasis, overview)",
+        ],
+        "Supportive care": [
+            "Trigger avoidance",
+            "Infection control",
+            "Education & skin care routines",
+        ],
+    },
+}
+
+# ============================
+# ADD THIS: ENT TREE
+# ============================
+ENT_TREE = {
+    "Ear": {
+        "External ear": {
+            "Auricle (pinna)": [
+                "Helix",
+                "Antihelix",
+                "Tragus",
+                "Antitragus",
+                "Concha",
+                "Lobule",
+            ],
+            "External auditory canal": [
+                "Cartilaginous portion",
+                "Bony portion",
+                "Cerumen glands (overview)",
+            ],
+        },
+
+        "Middle ear": {
+            "Tympanic membrane (eardrum)": [
+                "Pars tensa",
+                "Pars flaccida",
+            ],
+            "Ossicles": [
+                "Malleus",
+                "Incus",
+                "Stapes",
+            ],
+            "Middle ear cavity spaces (overview)": [
+                "Epitympanum (attic)",
+                "Mesotympanum",
+                "Hypotympanum",
+            ],
+            "Muscles": [
+                "Tensor tympani",
+                "Stapedius",
+            ],
+            "Eustachian tube (pharyngotympanic tube)": [
+                "Opening into nasopharynx",
+                "Ventilation of middle ear",
+                "Paediatric: shorter/more horizontal (otitis media risk, overview)",
+            ],
+            "Mastoid system": [
+                "Mastoid antrum",
+                "Mastoid air cells",
+            ],
+        },
+
+        "Inner ear": {
+            "Bony labyrinth": [
+                "Cochlea",
+                "Vestibule",
+                "Semicircular canals",
+            ],
+            "Membranous labyrinth": [
+                "Cochlear duct",
+                "Utricle",
+                "Saccule",
+                "Semicircular ducts",
+                "Endolymph",
+                "Perilymph (overview)",
+            ],
+            "Hearing apparatus": {
+                "Organ of Corti": [
+                    "Inner hair cells",
+                    "Outer hair cells",
+                    "Tectorial membrane (overview)",
+                ],
+                "Auditory pathway (overview)": [
+                    "Cochlear nerve",
+                    "Cochlear nucleus (brainstem, overview)",
+                    "Inferior colliculus (overview)",
+                    "Medial geniculate body (overview)",
+                    "Auditory cortex (overview)",
+                ],
+            },
+            "Vestibular apparatus": {
+                "Semicircular canals": ["Angular acceleration"],
+                "Utricle": ["Linear acceleration (horizontal)"],
+                "Saccule": ["Linear acceleration (vertical)"],
+                "Vestibular nerve": [],
+            },
+        },
+    },
+
+    "Nose & Nasal Cavity": {
+        "External nose": [
+            "Nasal bones",
+            "Septal cartilage (overview)",
+            "Alar cartilages (overview)",
+        ],
+        "Nasal cavity": {
+            "Nasal septum": ["Cartilaginous septum", "Bony septum (vomer/ethmoid, overview)"],
+            "Turbinates (conchae)": ["Superior", "Middle", "Inferior"],
+            "Meatuses": ["Superior meatus", "Middle meatus", "Inferior meatus"],
+            "Olfactory region": ["Olfactory epithelium (overview)"],
+            "Respiratory mucosa": ["Mucociliary clearance (overview)"],
+        },
+        "Nasal airflow & function": [
+            "Humidification",
+            "Warming",
+            "Filtration",
+            "Olfaction",
+        ],
+    },
+
+    "Paranasal Sinuses": {
+        "Frontal sinuses": [],
+        "Maxillary sinuses": [],
+        "Ethmoid air cells": [],
+        "Sphenoid sinuses": [],
+        "Drainage pathways (overview)": [
+            "Ostiomeatal complex (middle meatus, overview)",
+        ],
+        "Paediatric development (overview)": [
+            "Sinuses develop with age (clinical relevance for sinusitis patterns)",
+        ],
+    },
+
+    "Pharynx": {
+        "Nasopharynx": [
+            "Eustachian tube openings",
+            "Adenoids (pharyngeal tonsil)",
+        ],
+        "Oropharynx": [
+            "Palatine tonsils",
+            "Tongue base (overview)",
+        ],
+        "Laryngopharynx (hypopharynx)": [
+            "Piriform fossae (overview)",
+        ],
+    },
+
+    "Larynx": {
+        "Regions": [
+            "Supraglottis",
+            "Glottis",
+            "Subglottis",
+        ],
+        "Cartilages": [
+            "Thyroid cartilage",
+            "Cricoid cartilage",
+            "Epiglottis",
+            "Arytenoid cartilages",
+            "Corniculate cartilages (overview)",
+            "Cuneiform cartilages (overview)",
+        ],
+        "Vocal structures": [
+            "True vocal cords (vocal folds)",
+            "False vocal cords (vestibular folds)",
+            "Glottis",
+        ],
+        "Laryngeal muscles (overview)": [
+            "Posterior cricoarytenoid (abduction)",
+            "Lateral cricoarytenoid (adduction)",
+            "Cricothyroid (tension)",
+        ],
+        "Innervation (overview)": [
+            "Recurrent laryngeal nerve (motor to most muscles)",
+            "Superior laryngeal nerve (cricothyroid + sensation, overview)",
+        ],
+    },
+
+    "Oral Cavity (ENT interface)": {
+        "Tongue": ["Taste (overview)", "Speech/swallowing roles (overview)"],
+        "Tonsils": [
+            "Palatine tonsils",
+            "Lingual tonsils (overview)",
+        ],
+        "Salivary glands (overview)": [
+            "Parotid",
+            "Submandibular",
+            "Sublingual",
+        ],
+    },
+
+    "Neck (ENT-relevant Anatomy)": {
+        "Lymph nodes (overview)": [
+            "Anterior cervical nodes",
+            "Posterior cervical nodes",
+            "Submandibular nodes",
+            "Supraclavicular nodes",
+        ],
+        "Thyroid (ENT overlap)": [
+            "Thyroid gland enlargement (goitre, overview)",
+            "Thyroglossal duct remnant/cyst (overview)",
+        ],
+        "Congenital neck masses (overview)": [
+            "Branchial cleft cyst",
+            "Thyroglossal duct cyst",
+            "Cystic hygroma (lymphatic malformation, overview)",
+        ],
+    },
+
+    "ENT Physiology & Defence": {
+        "Hearing (overview)": [
+            "Sound conduction: external → middle → inner ear",
+            "Cochlear transduction (hair cells)",
+        ],
+        "Balance (overview)": [
+            "Vestibular input",
+            "Cerebellar integration (overview)",
+            "Oculomotor reflexes (VOR, overview)",
+        ],
+        "Mucociliary clearance": [
+            "Nasal mucosa cilia",
+            "Sinus drainage (overview)",
+        ],
+        "Local immune defence": [
+            "Waldeyer ring (tonsils/adenoids)",
+            "Secretory IgA (overview)",
+        ],
+    },
+
+    "Paediatric ENT (High-yield)": {
+        "Paediatric anatomy considerations": [
+            "Eustachian tube shorter/more horizontal → otitis media risk",
+            "Smaller subglottic airway → croup severity risk (overview)",
+            "Adenoid hypertrophy relevance (overview)",
+        ],
+        "Common paediatric ENT conditions (overview)": [
+            "Otitis media",
+            "Otitis externa",
+            "Glue ear (OME)",
+            "Tonsillitis",
+            "Adenoid hypertrophy",
+            "Croup",
+            "Epiglottitis (rare with vaccination, overview)",
+            "Foreign body (nose/ear)",
+        ],
+        "Hearing screening / development (overview)": [
+            "Newborn hearing screen",
+            "Speech delay linkage (overview)",
+        ],
+    },
+
+    "ENT Investigations (overview)": {
+        "Ear tests": [
+            "Otoscopy",
+            "Tympanometry (overview)",
+            "Pure tone audiometry (older child)",
+            "Otoacoustic emissions (newborn, overview)",
+        ],
+        "Nose/sinus": [
+            "Anterior rhinoscopy",
+            "Nasal endoscopy (overview)",
+        ],
+        "Throat/larynx": [
+            "Throat exam",
+            "Flexible nasendoscopy (overview)",
+            "Laryngoscopy (overview)",
+        ],
+        "Imaging (overview)": [
+            "X-ray/CT sinuses (selected cases, overview)",
+            "CT temporal bone (selected cases, overview)",
+        ],
+    },
+
+    "ENT Treatments (overview)": {
+        "Medical": [
+            "Antibiotics (selected infections, overview)",
+            "Intranasal steroids (rhinitis/adenoids, overview)",
+            "Analgesia",
+            "Antihistamines (selected cases, overview)",
+        ],
+        "Surgical / procedures (overview)": [
+            "Grommets (ventilation tubes)",
+            "Adenoidectomy",
+            "Tonsillectomy",
+            "Myringotomy",
+            "Foreign body removal",
+        ],
+    },
+}
+
+# ============================
+# ADD THIS: OPHTHALMOLOGY TREE
+# ============================
+OPH_TREE = {
+    "Eye (Globe) Anatomy": {
+        "Layers (Tunics) of the eye": {
+            "Fibrous coat": [
+                "Sclera",
+                "Cornea",
+            ],
+            "Vascular coat (Uvea)": [
+                "Iris",
+                "Ciliary body",
+                "Choroid",
+            ],
+            "Neural coat": [
+                "Retina",
+            ],
+        },
+
+        "Cornea": {
+            "Layers": [
+                "Epithelium",
+                "Bowman's layer (overview)",
+                "Stroma",
+                "Descemet membrane (overview)",
+                "Endothelium",
+            ],
+            "Functions": [
+                "Refraction",
+                "Barrier protection",
+            ],
+        },
+
+        "Sclera": [
+            "Scleral structure (overview)",
+            "Extraocular muscle insertion points (overview)",
+        ],
+
+        "Anterior chamber & aqueous humour": {
+            "Chambers": [
+                "Anterior chamber",
+                "Posterior chamber",
+            ],
+            "Aqueous humour production": [
+                "Ciliary processes",
+            ],
+            "Aqueous drainage": [
+                "Trabecular meshwork",
+                "Canal of Schlemm",
+                "Episcleral veins (overview)",
+                "Uveoscleral outflow (overview)",
+            ],
+        },
+
+        "Iris & pupil": {
+            "Iris muscles": [
+                "Sphincter pupillae (parasympathetic)",
+                "Dilator pupillae (sympathetic)",
+            ],
+            "Pupil": [
+                "Pupillary light reflex (overview)",
+                "Accommodation response (overview)",
+            ],
+        },
+
+        "Ciliary body": {
+            "Ciliary muscle": [
+                "Accommodation",
+            ],
+            "Ciliary processes": [
+                "Aqueous humour secretion",
+            ],
+            "Zonules (suspensory ligaments)": [
+                "Lens suspension",
+            ],
+        },
+
+        "Lens": {
+            "Structure": [
+                "Lens capsule",
+                "Lens fibres (overview)",
+            ],
+            "Functions": [
+                "Refraction",
+                "Accommodation",
+            ],
+        },
+
+        "Vitreous body": [
+            "Vitreous humour",
+            "Vitreoretinal interface (overview)",
+        ],
+
+        "Retina": {
+            "Key regions": [
+                "Macula",
+                "Fovea",
+                "Optic disc",
+                "Peripheral retina",
+            ],
+            "Photoreceptors": [
+                "Rods",
+                "Cones",
+            ],
+            "Retinal layers (overview)": [
+                "Retinal pigment epithelium (RPE)",
+                "Photoreceptor layer",
+                "Bipolar cell layer (overview)",
+                "Ganglion cell layer",
+            ],
+            "Retinal blood supply": [
+                "Central retinal artery",
+                "Choroidal circulation (outer retina) (overview)",
+            ],
+        },
+
+        "Optic nerve": {
+            "Optic nerve head": [
+                "Optic disc",
+                "Cup (optic cup, overview)",
+            ],
+            "Visual pathway (overview)": [
+                "Optic nerve",
+                "Optic chiasm",
+                "Optic tract",
+                "Lateral geniculate nucleus",
+                "Optic radiations",
+                "Visual cortex (occipital lobe)",
+            ],
+        },
+    },
+
+    "Adnexa (Supporting Structures)": {
+        "Eyelids": {
+            "Anatomy": [
+                "Skin",
+                "Orbicularis oculi",
+                "Tarsal plate",
+                "Levator palpebrae superioris (upper lid)",
+                "Müller muscle (sympathetic, overview)",
+            ],
+            "Glands": [
+                "Meibomian glands (tarsal glands)",
+                "Glands of Zeis (overview)",
+                "Glands of Moll (overview)",
+            ],
+            "Eyelashes": [],
+        },
+
+        "Conjunctiva": {
+            "Parts": [
+                "Palpebral conjunctiva",
+                "Bulbar conjunctiva",
+                "Fornices",
+            ],
+            "Functions": [
+                "Lubrication",
+                "Barrier defence (overview)",
+            ],
+        },
+
+        "Lacrimal system": {
+            "Tear production": [
+                "Lacrimal gland",
+                "Accessory lacrimal glands (overview)",
+            ],
+            "Tear film": [
+                "Lipid layer (Meibomian)",
+                "Aqueous layer (lacrimal gland)",
+                "Mucin layer (goblet cells)",
+            ],
+            "Tear drainage": [
+                "Puncta",
+                "Canaliculi",
+                "Lacrimal sac",
+                "Nasolacrimal duct",
+                "Drainage into inferior meatus (overview)",
+            ],
+        },
+
+        "Orbit": {
+            "Bony orbit (overview)": [
+                "Frontal bone",
+                "Zygomatic bone",
+                "Maxilla",
+                "Ethmoid",
+                "Sphenoid",
+                "Lacrimal bone",
+                "Palatine bone (overview)",
+            ],
+            "Orbital contents": [
+                "Globe",
+                "Extraocular muscles",
+                "Optic nerve",
+                "Orbital fat",
+                "Lacrimal gland",
+            ],
+        },
+    },
+
+    "Extraocular Muscles & Eye Movements": {
+        "Extraocular muscles": {
+            "Recti": [
+                "Medial rectus",
+                "Lateral rectus",
+                "Superior rectus",
+                "Inferior rectus",
+            ],
+            "Obliques": [
+                "Superior oblique",
+                "Inferior oblique",
+            ],
+            "Levator palpebrae superioris": [],
+        },
+        "Cranial nerve innervation": [
+            "CN III (oculomotor): most muscles + pupil constriction (parasymp)",
+            "CN IV (trochlear): superior oblique",
+            "CN VI (abducens): lateral rectus",
+        ],
+        "Gaze physiology (overview)": [
+            "Saccades",
+            "Smooth pursuit",
+            "Vestibulo-ocular reflex (VOR)",
+        ],
+    },
+
+    "Physiology of Vision": {
+        "Refraction": [
+            "Cornea (major refractive surface)",
+            "Lens (fine focus/accommodation)",
+        ],
+        "Accommodation": [
+            "Ciliary muscle contraction",
+            "Lens thickening",
+        ],
+        "Phototransduction (overview)": [
+            "Rods (dim light)",
+            "Cones (colour/acuity)",
+        ],
+        "Pupillary reflexes (overview)": [
+            "Afferent: CN II",
+            "Efferent: CN III",
+        ],
+        "Visual fields (overview)": [
+            "Nasal vs temporal retina mapping",
+            "Optic chiasm crossing (nasal fibres)",
+        ],
+    },
+
+    "Common Paediatric Ophthalmology (MRCPCH Core)": {
+        "Red eye": {
+            "Conjunctivitis": [
+                "Viral conjunctivitis",
+                "Bacterial conjunctivitis",
+                "Allergic conjunctivitis",
+            ],
+            "Blepharitis (overview)": [],
+            "Keratitis (overview)": [],
+        },
+
+        "Visual development": {
+            "Amblyopia": [
+                "Strabismic amblyopia",
+                "Refractive amblyopia",
+                "Deprivation amblyopia",
+            ],
+            "Strabismus": [
+                "Esotropia",
+                "Exotropia",
+                "Hypertropia (overview)",
+            ],
+        },
+
+        "Refractive errors": [
+            "Myopia",
+            "Hyperopia",
+            "Astigmatism",
+        ],
+
+        "Paediatric emergencies (overview)": {
+            "Leukocoria": [
+                "Congenital cataract",
+                "Retinoblastoma",
+                "Persistent fetal vasculature (overview)",
+                "Retinopathy of prematurity (overview)",
+            ],
+            "Acute painful red eye (rare paeds, overview)": [
+                "Acute glaucoma (rare)",
+                "Uveitis (overview)",
+            ],
+            "Orbital cellulitis": [
+                "Sinus-related spread (overview)",
+                "Proptosis / painful eye movements (overview)",
+            ],
+            "Chemical injury (overview)": [],
+        },
+
+        "Neonatal eye conditions": [
+            "Nasolacrimal duct obstruction",
+            "Ophthalmia neonatorum (overview)",
+        ],
+    },
+
+    "Investigations (overview)": {
+        "Visual acuity assessment": [
+            "Age-appropriate charts (overview)",
+            "Fix-and-follow (infant, overview)",
+        ],
+        "Pupil exam": [
+            "Direct/consensual light reflex",
+            "RAPD (relative afferent pupillary defect, overview)",
+        ],
+        "Eye alignment": [
+            "Hirschberg test (overview)",
+            "Cover–uncover test (overview)",
+        ],
+        "Fundoscopy (overview)": [
+            "Optic disc",
+            "Vessels",
+            "Macula",
+        ],
+        "Intraocular pressure (overview)": [
+            "Tonometry",
+        ],
+        "Imaging (overview)": [
+            "Ocular ultrasound (selected cases)",
+            "OCT (retina/optic nerve, overview)",
+        ],
+    },
+
+    "Treatments (overview)": {
+        "Topical": [
+            "Lubricants",
+            "Topical antibiotics (selected cases, overview)",
+            "Topical antihistamines (allergic conjunctivitis, overview)",
+            "Topical steroids (specialist use, overview)",
+        ],
+        "Vision correction": [
+            "Glasses",
+            "Contact lenses (selected cases, overview)",
+        ],
+        "Amblyopia therapy": [
+            "Patching",
+            "Atropine penalisation (overview)",
+        ],
+        "Surgical (overview)": [
+            "Strabismus surgery",
+            "Cataract surgery (congenital cataract)",
+            "Nasolacrimal probing (persistent obstruction)",
+        ],
+    },
+}
+
+# ============================
+# ADD THIS: PSYCHOLOGY & DEVELOPMENT TREE (MRCPCH-oriented)
+# ============================
+PSYCH_TREE = {
+    "Child Development (Core Domains)": {
+        "Gross motor": {
+            "Posture & tone (overview)": [
+                "Head control",
+                "Truncal stability",
+                "Balance and gait (overview)",
+            ],
+            "Milestones (overview)": [
+                "Rolling",
+                "Sitting",
+                "Crawling",
+                "Standing",
+                "Walking",
+                "Running/jumping",
+            ],
+            "Coordination (overview)": [
+                "Climbing stairs",
+                "Hopping",
+                "Skipping",
+            ],
+        },
+
+        "Fine motor & vision": {
+            "Hand skills (overview)": [
+                "Reaching",
+                "Grasp patterns (palmar → pincer) (overview)",
+                "Manipulation (stacking, scribbling) (overview)",
+            ],
+            "Pre-writing skills (overview)": [
+                "Scribble",
+                "Copy shapes",
+                "Draw person (overview)",
+            ],
+            "Visual-motor integration (overview)": [
+                "Tracking",
+                "Hand–eye coordination",
+            ],
+        },
+
+        "Speech, language & communication": {
+            "Language components": {
+                "Receptive language": [
+                    "Understanding commands",
+                    "Understanding vocabulary",
+                ],
+                "Expressive language": [
+                    "Babbling",
+                    "First words",
+                    "Two-word phrases",
+                    "Sentences (overview)",
+                ],
+                "Pragmatics (social use of language)": [
+                    "Turn-taking",
+                    "Eye contact (overview)",
+                    "Gestures (pointing, waving)",
+                ],
+            },
+            "Speech sound production (overview)": [
+                "Articulation",
+                "Phonology",
+            ],
+            "Non-verbal communication": [
+                "Gestures",
+                "Facial expression",
+                "Joint attention",
+            ],
+        },
+
+        "Social, emotional & behavioural development": {
+            "Attachment": [
+                "Secure attachment",
+                "Insecure attachment (overview)",
+                "Separation anxiety (overview)",
+            ],
+            "Emotional regulation (overview)": [
+                "Self-soothing",
+                "Tantrums and limits (overview)",
+            ],
+            "Play": {
+                "Stages of play (overview)": [
+                    "Solitary play",
+                    "Parallel play",
+                    "Associative play",
+                    "Cooperative play",
+                ],
+                "Imaginative play (overview)": [],
+            },
+            "Peer relationships (overview)": [
+                "Friendship skills",
+                "Bullying and social stressors (overview)",
+            ],
+        },
+
+        "Cognition & learning": {
+            "Executive functions (overview)": [
+                "Attention",
+                "Working memory",
+                "Planning",
+                "Inhibitory control",
+            ],
+            "Problem-solving (overview)": [],
+            "School readiness (overview)": [
+                "Pre-literacy skills",
+                "Pre-numeracy skills",
+            ],
+        },
+    },
+
+    "Neurodevelopmental Disorders": {
+        "Autism spectrum disorder (ASD)": {
+            "Core features": [
+                "Social communication differences",
+                "Restricted/repetitive behaviours",
+                "Sensory differences (overview)",
+            ],
+            "Associated features (overview)": [
+                "Language delay",
+                "Intellectual disability (some)",
+                "Anxiety (common, overview)",
+                "Sleep difficulties (overview)",
+            ],
+            "Red flags (overview)": [
+                "No babbling/gestures by ~12 months (overview)",
+                "No single words by ~16 months (overview)",
+                "No 2-word phrases by ~24 months (overview)",
+                "Loss of skills (regression)",
+                "Poor joint attention (overview)",
+            ],
+        },
+
+        "ADHD": {
+            "Domains": [
+                "Inattention",
+                "Hyperactivity",
+                "Impulsivity",
+            ],
+            "Presentations (overview)": [
+                "Predominantly inattentive",
+                "Predominantly hyperactive-impulsive",
+                "Combined",
+            ],
+            "Functional impacts (overview)": [
+                "School performance",
+                "Peer relationships",
+                "Injury risk (overview)",
+            ],
+        },
+
+        "Specific learning disorders (overview)": {
+            "Dyslexia (reading)": [],
+            "Dyscalculia (maths)": [],
+            "Written expression difficulties": [],
+        },
+
+        "Developmental coordination disorder (DCD)": [
+            "Clumsiness / poor motor coordination",
+            "Impact on daily living and school (overview)",
+        ],
+
+        "Intellectual disability (overview)": {
+            "Definition (overview)": [
+                "Limitations in intellectual functioning",
+                "Limitations in adaptive functioning",
+            ],
+            "Adaptive domains (overview)": [
+                "Conceptual",
+                "Social",
+                "Practical",
+            ],
+        },
+
+        "Speech & language disorders": {
+            "Developmental language disorder (DLD)": [],
+            "Speech sound disorder (overview)": [],
+            "Stuttering (overview)": [],
+        },
+    },
+
+    "Mental Health in Children & Adolescents": {
+        "Anxiety disorders (overview)": [
+            "Separation anxiety disorder",
+            "Generalised anxiety disorder",
+            "Social anxiety disorder",
+            "Specific phobias",
+            "Panic disorder (overview)",
+        ],
+        "Depressive disorders (overview)": [
+            "Major depressive disorder",
+            "Persistent depressive disorder (dysthymia) (overview)",
+        ],
+        "Obsessive-compulsive disorder (OCD) (overview)": [
+            "Obsessions",
+            "Compulsions",
+        ],
+        "Trauma & stressor-related disorders (overview)": [
+            "PTSD (overview)",
+            "Adjustment disorder (overview)",
+        ],
+        "Eating disorders (informational, overview)": [
+            "Anorexia nervosa (overview)",
+            "Avoidant/restrictive food intake disorder (ARFID) (overview)",
+        ],
+        "Tic disorders (overview)": [
+            "Transient tic disorder",
+            "Chronic motor/vocal tic disorder",
+            "Tourette syndrome (overview)",
+        ],
+        "Psychosis (rare in paeds, overview)": [
+            "Hallucinations/delusions (overview)",
+            "Early-onset psychosis (overview)",
+        ],
+    },
+
+    "Behavioural & Emotional Presentations (Common in Paeds)": {
+        "Sleep problems": {
+            "Sleep hygiene (overview)": [],
+            "Behavioural insomnia of childhood (overview)": [],
+            "Night terrors (overview)": [],
+            "Nightmares (overview)": [],
+            "Sleepwalking (overview)": [],
+            "OSA symptoms (ENT link, overview)": ["Snoring", "Daytime sleepiness/behavioural issues (overview)"],
+        },
+        "Enuresis & encopresis (overview)": [
+            "Nocturnal enuresis",
+            "Daytime wetting (overview)",
+            "Encopresis/soiling (overview)",
+        ],
+        "Temper tantrums & oppositional behaviour (overview)": [
+            "Normal toddler tantrums vs atypical patterns (overview)",
+            "Oppositional defiant disorder (overview)",
+        ],
+        "School refusal (overview)": [
+            "Anxiety-related school refusal",
+            "Bullying-related (overview)",
+        ],
+        "Substance use (adolescents, overview)": [
+            "Screening and risk factors (overview)",
+        ],
+    },
+
+    "Developmental Assessment & Screening": {
+        "History": [
+            "Pregnancy/birth history",
+            "Medical history",
+            "Family history",
+            "Social history",
+            "Developmental history (all domains)",
+        ],
+        "Examination (overview)": [
+            "Growth parameters",
+            "Dysmorphic features (overview)",
+            "Neurological exam (tone, reflexes, coordination)",
+            "Vision/hearing screen (overview)",
+        ],
+        "Screening tools (overview)": [
+            "Developmental surveillance",
+            "Parent questionnaires (overview)",
+            "ASD screening tools (overview)",
+            "ADHD rating scales (overview)",
+        ],
+        "Hearing assessment": [
+            "Newborn hearing screen",
+            "Audiology referral (overview)",
+        ],
+        "Vision assessment (overview)": [
+            "Visual acuity",
+            "Strabismus screening (overview)",
+        ],
+    },
+
+    "Safeguarding, Adverse Childhood Experiences & Social Factors": {
+        "Safeguarding principles (overview)": [
+            "Recognising abuse/neglect",
+            "Documenting findings (overview)",
+            "Multi-agency working (overview)",
+        ],
+        "Types of maltreatment (overview)": [
+            "Physical abuse",
+            "Emotional abuse",
+            "Sexual abuse (overview)",
+            "Neglect",
+        ],
+        "ACE and toxic stress (overview)": [
+            "Impact on development",
+            "Mental health and behaviour effects (overview)",
+        ],
+        "Family & social context (overview)": [
+            "Parental mental health",
+            "Domestic violence exposure (overview)",
+            "Poverty/housing instability (overview)",
+        ],
+    },
+
+    "Child & Adolescent Psychiatry Interface (Care Pathways)": {
+        "Initial management (overview)": [
+            "Psychoeducation",
+            "Parenting support",
+            "School liaison (overview)",
+            "Lifestyle/sleep interventions (overview)",
+        ],
+        "Therapies (overview)": [
+            "CBT",
+            "Family therapy",
+            "Behavioural interventions",
+            "Speech and language therapy (SALT)",
+            "Occupational therapy (OT)",
+            "Physiotherapy (PT)",
+        ],
+        "Medication (overview)": [
+            "ADHD medications (stimulant/non-stimulant, overview)",
+            "SSRIs for anxiety/depression (specialist use, overview)",
+            "Melatonin for sleep (selected cases, overview)",
+        ],
+        "Referral & MDT": [
+            "CAMHS",
+            "Educational psychology (overview)",
+            "SEN support / school services (overview)",
+            "Community paediatrics",
+        ],
+    },
+
+    "Paediatric-Specific Developmental Topics": {
+        "Prematurity & development (overview)": [
+            "Corrected age",
+            "Neurodevelopmental follow-up (overview)",
+        ],
+        "Global developmental delay": [
+            "Definition (overview)",
+            "Key causes (overview)",
+            "Red flags (loss of skills, severe delay)",
+        ],
+        "Developmental regression": [
+            "Loss of previously acquired skills",
+            "Urgent evaluation triggers (overview)",
+        ],
+        "Language bilingualism (overview)": [
+            "Normal bilingual language patterns (overview)",
+            "When to worry (overview)",
+        ],
+    },
+}
+
 # ----------------------------
 # Helpers for hierarchical navigation (generalised)
 # ----------------------------
@@ -1888,5 +3685,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
